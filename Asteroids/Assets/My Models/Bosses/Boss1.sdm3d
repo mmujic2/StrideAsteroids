@@ -1,0 +1,15 @@
+!Model
+Id: a2e40d3d-fec0-412a-8b32-f7fcd7f74fd6
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Source: !file ../../../Resources/My models/Bosses/Boss1.fbx
+Skeleton: null
+PivotPosition: {X: 0.0, Y: 0.0, Z: 0.0}
+Materials:
+    41f4a7de1bed160c9eb5ab4a0b7d974d:
+        Name: Material
+        MaterialInstance:
+            Material: a7bb0e26-7acc-4b2f-8ad8-411f950eb2b1:My Models/AlienShip/alienShipMaterial
+Modifiers: {}
+~SourceHashes:
+    a04040bad51f1286938887c0ba94f55f~../../../Resources/My models/Bosses/Boss1.fbx: 764e3cacbe7d0532de2ba300bbf07d61

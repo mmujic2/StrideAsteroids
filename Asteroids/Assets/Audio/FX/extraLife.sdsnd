@@ -1,0 +1,8 @@
+!Sound
+Id: bfb3093a-3a06-47ff-9880-852c7a532942
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Source: !file ../../../Resources/Audio/FX/extraLife.wav
+CompressionRatio: 15
+StreamFromDisk: false
+Spatialized: false

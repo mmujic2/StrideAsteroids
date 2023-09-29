@@ -1,0 +1,15 @@
+!Model
+Id: bf2af6e9-79de-4f0f-8ea7-8bd6c9c1187b
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Source: !file ../../../Resources/My models/SpaceBackgrounds/space4.fbx
+Skeleton: null
+PivotPosition: {X: 0.0, Y: 0.0, Z: 0.0}
+Materials:
+    a332e7ab0260d2ba183a03727f16e187:
+        Name: Space1
+        MaterialInstance:
+            Material: 7a971d4e-89fd-4ab2-8be1-92714909ef3b:My Models/SpaceBackgrounds/Space4Material
+Modifiers: {}
+~SourceHashes:
+    6d7e8ab4ea6ddc1a9dc621d1de3d4913~../../../Resources/My models/SpaceBackgrounds/space4.fbx: 9b9f82c6a866466f8af6435b6ef90991

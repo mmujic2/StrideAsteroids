@@ -1,0 +1,8 @@
+!Sound
+Id: b0aa072a-a446-4067-a62b-972232af2af2
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Source: !file ../../../Resources/Audio/FX/laserProjectileFire.wav
+CompressionRatio: 15
+StreamFromDisk: false
+Spatialized: false

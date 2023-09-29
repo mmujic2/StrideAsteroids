@@ -1,0 +1,8 @@
+!Texture
+Id: 59dfccd9-a5a5-4bb8-a81c-41ffd5986ca6
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Source: !file ../../../Resources/My models/AlienShip/alienShip.fbm/BasicColorPalette.png
+Type: !ColorTextureType
+    ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
+    PremultiplyAlpha: false

@@ -1,0 +1,8 @@
+!Texture
+Id: 33ffd1c7-40a3-4058-a8cc-e0ae73398368
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Source: !file ../../../Resources/My models/Asteroids/BigAsteroid1.fbm/Rock050_1K-JPG_Color.jpg
+Type: !ColorTextureType
+    ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
+    PremultiplyAlpha: false

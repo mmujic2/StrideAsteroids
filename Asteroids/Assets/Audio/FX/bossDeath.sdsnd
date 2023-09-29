@@ -1,0 +1,8 @@
+!Sound
+Id: 76b3d361-e4ca-4a58-8ee3-1219266f950b
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Source: !file ../../../Resources/Audio/FX/bossDeath.wav
+CompressionRatio: 15
+StreamFromDisk: false
+Spatialized: false

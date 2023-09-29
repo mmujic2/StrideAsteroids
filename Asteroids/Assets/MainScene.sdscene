@@ -1,0 +1,248 @@
+!SceneAsset
+Id: 430a6643-6207-45d9-bf44-f1e7089c4924
+SerializedVersion: {Stride: 3.1.0.1}
+Tags: []
+ChildrenIds: []
+Offset: {X: 0.0, Y: 0.0, Z: 0.0}
+Hierarchy:
+    RootParts:
+        - ref!! 77987def-6a2d-42a3-8995-27ec21049eb4
+        - ref!! 5e6bc58e-c9e9-48ef-9f10-18d253c50bea
+        - ref!! c6ea237e-4663-4bd4-a5e8-f6a294200aaa
+        - ref!! 1a2c8a57-7460-4499-be89-a236d7f2b722
+        - ref!! b387522a-110e-44d0-a350-52ed34c481f7
+        - ref!! f0fbc2df-cefa-4aa4-9b14-59c88eb0f4a6
+        - ref!! d24fcda4-3fae-4579-9ecf-abfbedaa2f8c
+        - ref!! 536a425f-c16a-4d7e-89b6-47f55893a787
+        - ref!! 0f13f47f-be22-4892-95da-aff3ef307a6d
+        - ref!! aaaa2261-a006-408c-b95c-1742a6db9218
+        - ref!! 62f9d470-86f6-47e4-92e9-e1debed69896
+        - ref!! b56bb620-6ee0-4cce-836b-ac53ff02b6a1
+    Parts:
+        -   Entity:
+                Id: 0f13f47f-be22-4892-95da-aff3ef307a6d
+                Name: stage1
+                Components:
+                    d40bfc76fe00e147b81173da052f9f02: !TransformComponent
+                        Id: 9f7de1cb-2909-4cbe-9859-b0c0e927da50
+                        Position: {X: 0.0, Y: -100.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    7d108ed7433e4a5f463c7368426ac352: !ModelComponent
+                        Id: 5327fd51-d11d-43cb-b112-55279ae0a4a0
+                        Model: 2005bcc7-af1a-4314-bfcd-c51b04f623ba:My Models/SpaceBackgrounds/space1
+                        Materials: {}
+        -   Entity:
+                Id: 1a2c8a57-7460-4499-be89-a236d7f2b722
+                Name: Sphere
+                Components:
+                    5ce5634699f7d0f6d470fac18c57766c: !TransformComponent
+                        Id: 58d928f4-0bc1-4e04-8785-64759e3f5ae9
+                        Position: {X: -8.891039, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    fbc7caff6a8b5ce296469cc92ddc96f3: !ModelComponent
+                        Id: e727511e-28a3-487d-8f4d-48a9f44a4f47
+                        Model: fcb19867-54c4-4dc4-b82e-afff2ce0b901:Sphere
+                        Materials:
+                            69bdcbc6d2387a26433f98b42746066d~0: 3fc5ccbd-7918-4cbb-b8c5-1f48f11394ea:Sphere Material
+        -   Entity:
+                Id: 536a425f-c16a-4d7e-89b6-47f55893a787
+                Name: Directional light
+                Components:
+                    985cc634db521586b1f39d4002722963: !TransformComponent
+                        Id: c4103f5b-83dd-4d9a-a901-dbfcdfaa0e2f
+                        Position: {X: 10.557849, Y: 3.8588672, Z: 0.0}
+                        Rotation: {X: -0.57357645, Y: 0.0, Z: 0.0, W: 0.81915206}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    31497e6f738a72f9b5907661495b8cdd: !LightComponent
+                        Id: 421ee018-cb00-4695-9c3b-e171a8977192
+                        Type: !LightDirectional
+                            Color: !ColorRgbProvider
+                                Value: {R: 1.0, G: 1.0, B: 1.0}
+                            Shadow:
+                                Enabled: true
+                                Size: Large
+                                DepthRange: {}
+                                PartitionMode: !LightDirectionalShadowMap.PartitionLogarithmic {}
+                                ComputeTransmittance: false
+                                BiasParameters: {}
+                        Intensity: 0.5
+        -   Entity:
+                Id: 5e6bc58e-c9e9-48ef-9f10-18d253c50bea
+                Name: Directional light
+                Components:
+                    8ef5c32674984af72d59ecf1df041575: !TransformComponent
+                        Id: 9b67028f-7ef8-4bd7-9b51-3e8016ebc41b
+                        Position: {X: 0.0, Y: 2.0, Z: 0.0}
+                        Rotation: {X: 1.131334E-08, Y: -0.9659258, Z: -0.25881904, W: -4.222196E-08}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    ac1d6a9240edf9f386b38cdd94f3ca6d: !LightComponent
+                        Id: df8b495a-c6c8-4489-8fed-41ed8d3e5808
+                        Type: !LightDirectional
+                            Color: !ColorRgbProvider
+                                Value: {R: 1.0, G: 1.0, B: 1.0}
+                            Shadow:
+                                Enabled: true
+                                Filter: !LightShadowMapFilterTypePcf
+                                    FilterSize: Filter5x5
+                                Size: Large
+                                DepthRange: {}
+                                PartitionMode: !LightDirectionalShadowMap.PartitionLogarithmic {}
+                                ComputeTransmittance: false
+                                BiasParameters: {}
+                        Intensity: 0.0
+        -   Entity:
+                Id: 62f9d470-86f6-47e4-92e9-e1debed69896
+                Name: stage3
+                Components:
+                    47c2bdb5e1837a2cb192e9e4b9e0a8a8: !TransformComponent
+                        Id: 30c3d2cb-ca6b-441d-907c-460416350a7a
+                        Position: {X: 0.0, Y: -100.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.0, Y: 1.0, Z: 0.0}
+                        Children: {}
+                    c239ed5492e3ed283c1834b7eca2dadd: !ModelComponent
+                        Id: 526013ca-56ac-43ae-a009-039aa50ee342
+                        Model: 766d22ed-d766-4293-b118-a14a36f4a9fa:My Models/SpaceBackgrounds/space3
+                        Materials: {}
+        -   Entity:
+                Id: 77987def-6a2d-42a3-8995-27ec21049eb4
+                Name: Camera
+                Components:
+                    d577feef12fc4fa69d88b8b2710baaf7: !TransformComponent
+                        Id: 54ca807f-72e1-47ea-b208-b6ba259cfee6
+                        Position: {X: 0.0, Y: 4.811412, Z: 0.0}
+                        Rotation: {X: -0.70710677, Y: 0.0, Z: 0.0, W: 0.70710677}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    9725d6319a6637a2e8981c70717893c9: !CameraComponent
+                        Id: a641f04f-e8e7-4558-8926-912e74e5db44
+                        Name: null
+                        Projection: Orthographic
+                        UseCustomAspectRatio: true
+                        AspectRatio: 1.0
+                        Slot: 2cb19590-71df-4c5a-ac86-f9b9481548f3
+                    b050dc2c4ce2eb7f9986ee2b0c16f865: !Asteroids.MainScript,Asteroids
+                        Id: 4d6fbf10-4147-49ce-95ea-8a57e8c62ed8
+                        stage1Map: ref!! 0f13f47f-be22-4892-95da-aff3ef307a6d
+                        stage2Map: ref!! aaaa2261-a006-408c-b95c-1742a6db9218
+                        stage3Map: ref!! 62f9d470-86f6-47e4-92e9-e1debed69896
+                        stage4Map: ref!! b56bb620-6ee0-4cce-836b-ac53ff02b6a1
+                    409876d7e29e9180ccc14b3ecf4cf2f1: !UIComponent
+                        Id: 22cfc7bc-03ed-4e4b-bfe2-5d4708f6c373
+                        Page: 81d01138-bb6c-4be8-9000-66bc2cd2e6eb:UILibs/GameUI
+                        Resolution: {X: 900.0, Y: 900.0, Z: 1000.0}
+                        Size: {X: 1.28, Y: 0.72, Z: 1.0}
+        -   Entity:
+                Id: aaaa2261-a006-408c-b95c-1742a6db9218
+                Name: stage2
+                Components:
+                    0435c7c097eba3ead08ea58defd301ed: !TransformComponent
+                        Id: ddf9114f-9604-4ca2-a903-6ddb8e98a487
+                        Position: {X: 0.0, Y: -100.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.0, Y: 1.0, Z: 0.0}
+                        Children: {}
+                    55784dd947e118463f7cf7298927b1d3: !ModelComponent
+                        Id: 13667120-9d87-47fc-a7dd-084f644390ca
+                        Model: 37124b3b-3b61-4850-af0f-be814476e783:My Models/SpaceBackgrounds/space2
+                        Materials: {}
+        -   Entity:
+                Id: b387522a-110e-44d0-a350-52ed34c481f7
+                Name: Space1
+                Components:
+                    aa73465664ee905bc8b426f40907ad1c: !TransformComponent
+                        Id: 3902eb20-bb5a-472d-a80e-19c03baf5004
+                        Position: {X: -16.7587, Y: -11.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 10.0, Y: 0.1, Z: 10.0}
+                        Children: {}
+                    915f638b9b41cbb2c8dcdc3dfcae27d2: !ModelComponent
+                        Id: 622486f4-1adc-4eb5-ae5b-7cce392ba660
+                        Model: null
+                        Materials: {}
+        -   Entity:
+                Id: b56bb620-6ee0-4cce-836b-ac53ff02b6a1
+                Name: stage4
+                Components:
+                    6bc1c658adcb7941be8ac539e2781d38: !TransformComponent
+                        Id: d22366bc-b25d-4957-b02e-37f31b6bc73f
+                        Position: {X: 0.0, Y: -100.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.0, Y: 1.0, Z: 0.0}
+                        Children: {}
+                    b2f1bbd2af903335b7a7484c54e923dc: !ModelComponent
+                        Id: 04445369-defb-4613-9f92-267693876882
+                        Model: bf2af6e9-79de-4f0f-8ea7-8bd6c9c1187b:My Models/SpaceBackgrounds/space4
+                        Materials: {}
+        -   Entity:
+                Id: c6ea237e-4663-4bd4-a5e8-f6a294200aaa
+                Name: Skybox
+                Components:
+                    0c605e0b621f63e643732f1bb732faeb: !TransformComponent
+                        Id: 8abc99cc-bbd3-4a8e-b689-824a679d5abf
+                        Position: {X: 0.0, Y: 2.0, Z: -2.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    cd17c1b36d57d987530fac1602d83532: !BackgroundComponent
+                        Id: d2379f22-2b69-4831-ac34-8af48760af6f
+                        Texture: 017c8383-314d-4c5d-bd93-8501e1ee0fb9:Skybox texture
+                    d4f83d49ddc8c0f64d6a52518d7c908e: !LightComponent
+                        Id: d2e4f89f-091f-45e5-a2a2-3319ec441d97
+                        Type: !LightSkybox
+                            Skybox: 1f6e6468-c6ff-495c-818e-7ced5dfde1d3:Skybox
+                        Intensity: 0.0
+        -   Entity:
+                Id: d24fcda4-3fae-4579-9ecf-abfbedaa2f8c
+                Name: SceneLight1
+                Components:
+                    af3c50cfb2b2fc04843282b50d871696: !TransformComponent
+                        Id: 4d59c501-1122-40f8-9cac-153da2995f5d
+                        Position: {X: 9.312431, Y: 8.369268, Z: 0.0}
+                        Rotation: {X: -0.4055798, Y: 0.579228, Z: 0.4055798, W: 0.579228}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    2930d4a01b202ef6e6638793e13fa594: !LightComponent
+                        Id: 639375c1-09f2-4e2d-ad7d-95c917dba002
+                        Type: !LightSpot
+                            Color: !ColorRgbProvider
+                                Value: {R: 1.0, G: 1.0, B: 1.0}
+                            Range: 20.0
+                            AngleInner: 90.0
+                            AngleOuter: 90.0
+                            UVScale: {X: 1.0, Y: 1.0}
+                            UVOffset: {X: 0.0, Y: 0.0}
+                            Shadow:
+                                BiasParameters:
+                                    DepthBias: 0.001
+                        Intensity: 300.0
+        -   Entity:
+                Id: f0fbc2df-cefa-4aa4-9b14-59c88eb0f4a6
+                Name: backgroundLight
+                Components:
+                    af3c50cfb2b2fc04843282b50d871696: !TransformComponent
+                        Id: ad30511f-8a70-4e96-ae5d-230f15d13c2f
+                        Position: {X: 0.6178417, Y: -103.0, Z: 0.0}
+                        Rotation: {X: -0.70710677, Y: 0.0, Z: 0.0, W: 0.70710677}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    2930d4a01b202ef6e6638793e13fa594: !LightComponent
+                        Id: 255f2971-747f-40dd-b7f7-6fcb916a583e
+                        Type: !LightSpot
+                            Color: !ColorRgbProvider
+                                Value: {R: 1.0, G: 1.0, B: 1.0}
+                            Range: 200.0
+                            AngleInner: 90.0
+                            AngleOuter: 90.0
+                            UVScale: {X: 1.0, Y: 1.0}
+                            UVOffset: {X: 0.0, Y: 0.0}
+                            Shadow:
+                                BiasParameters:
+                                    DepthBias: 0.001
+                        Intensity: 25.0

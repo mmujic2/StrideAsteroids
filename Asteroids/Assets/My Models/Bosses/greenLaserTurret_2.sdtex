@@ -1,0 +1,8 @@
+!Texture
+Id: 2bbb80a1-d353-4c07-8eff-ba03837255ea
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Source: !file ../../../Resources/My models/Bosses/Boss3.fbm/greenLaserTurret.png
+Type: !ColorTextureType
+    ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
+    PremultiplyAlpha: false

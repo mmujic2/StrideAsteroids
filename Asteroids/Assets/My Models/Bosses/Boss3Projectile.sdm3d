@@ -1,0 +1,15 @@
+!Model
+Id: 423ea959-7854-45cb-bcd0-26edd8fdf943
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Source: !file ../../../Resources/My models/Bosses/Boss3Projectile.fbx
+Skeleton: null
+PivotPosition: {X: 0.0, Y: 0.0, Z: 0.0}
+Materials:
+    15dd1e6e40e05b4fa7687521ba43629c:
+        Name: Material
+        MaterialInstance:
+            Material: edcec3a7-304f-4c59-a99e-b5754fbc4389:My Models/Bosses/Boss2Material
+Modifiers: {}
+~SourceHashes:
+    d492d18d9f3b0322d3f3ea34b827f6da~../../../Resources/My models/Bosses/Boss3Projectile.fbx: 2ea1949ac4325e37fe7cbb3cd222a089

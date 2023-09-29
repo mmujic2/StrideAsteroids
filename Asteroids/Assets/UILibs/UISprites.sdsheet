@@ -1,0 +1,177 @@
+!SpriteSheet
+Id: fb8a72e4-7f91-4d1e-9367-b34ff198c8bc
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Type: UI
+ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
+IsCompressed: false
+Packing: {}
+Sprites:
+    17d643c32c04b58c62777b0969a05265:
+        Source: !file ../../Resources/UI sprites/UISheet.png
+        Name: Window
+        TextureRegion: {X: 75, Y: 63, Width: 940, Height: 780}
+        Center: {X: 0.0, Y: 0.0}
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    3710951203a06df0c6986e6501ecc04f:
+        Source: !file ../../Resources/UI sprites/UISheet.png
+        Name: projectiles
+        TextureRegion: {X: 1048, Y: 110, Width: 30, Height: 58}
+        Center: {X: 0.0, Y: 0.0}
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    b87363c9cd535f848629a1e8d6bf2909:
+        Source: !file ../../Resources/UI sprites/UISheet.png
+        Name: damage
+        TextureRegion: {X: 1048, Y: 173, Width: 30, Height: 58}
+        Center: {X: 0.0, Y: 0.0}
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    ba6c33e25f08870d3108acee893b3699:
+        Source: !file ../../Resources/UI sprites/UISheet.png
+        Name: agility
+        TextureRegion: {X: 1048, Y: 237, Width: 30, Height: 58}
+        Center: {X: 0.0, Y: 0.0}
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    f9e719ac1b900413f6ff28de9129fd6e:
+        Source: !file ../../Resources/UI sprites/UISheet.png
+        Name: statBar
+        TextureRegion: {X: 1052, Y: 350, Width: 340, Height: 70}
+        Center: {X: 0.0, Y: 0.0}
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    233547c31fe69f3b3f0d1962a73f6211:
+        Source: !file ../../Resources/UI sprites/UISheet.png
+        Name: topBar
+        TextureRegion: {X: 89, Y: 876, Width: 1080, Height: 80}
+        Center: {X: 0.0, Y: 0.0}
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    03222375b292f5631f4ede592d0847f0:
+        Source: !file ../../Resources/UI sprites/UISheet.png
+        Name: bossBar
+        TextureRegion: {X: 108, Y: 1040, Width: 1040, Height: 30}
+        Center: {X: 0.0, Y: 0.0}
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    41005a5b64114183f01a61d9f4c594fe:
+        Source: !file ../../Resources/UI sprites/UISheet.png
+        Name: bossHpLeft
+        TextureRegion: {X: 256, Y: 1097, Width: 50, Height: 20}
+        Center: {X: 0.0, Y: 0.0}
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    84cdb933f935541af30d99f38d2867ce:
+        Source: !file ../../Resources/UI sprites/UISheet.png
+        Name: bossHpRight
+        TextureRegion: {X: 355, Y: 1104, Width: 50, Height: 20}
+        Center: {X: 0.0, Y: 0.0}
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    8c9d67f8adbfc7396fcb91b8aef8536f:
+        Source: !file ../../Resources/UI sprites/UISheet.png
+        Name: bossHpCenter
+        TextureRegion: {X: 151, Y: 1102, Width: 35, Height: 20}
+        Center: {X: 0.0, Y: 0.0}
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    bc1da87eb4a093777f4dbcaa3ba5266b:
+        Source: !file ../../Resources/UI sprites/UISheet.png
+        Name: buttonSmallNormal
+        TextureRegion: {X: 26, Y: 1176, Width: 200, Height: 200}
+        Center: {X: 0.0, Y: 0.0}
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    10cea235dcfda526e7f78a479f37b1f5:
+        Source: !file ../../Resources/UI sprites/UISheet.png
+        Name: buttonSmallHover
+        TextureRegion: {X: 24, Y: 1403, Width: 200, Height: 200}
+        Center: {X: 0.0, Y: 0.0}
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    2729884c8f673544242e767dfb62973e:
+        Source: !file ../../Resources/UI sprites/UISheet.png
+        Name: buttonSmallClick
+        TextureRegion: {X: 34, Y: 1651, Width: 200, Height: 200}
+        Center: {X: 0.0, Y: 0.0}
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    f1591244d6899edfae70fc16e96c29a7:
+        Source: !file ../../Resources/UI sprites/UISheet.png
+        Name: buttonBigNormal
+        TextureRegion: {X: 237, Y: 1176, Width: 661, Height: 200}
+        Center: {X: 0.0, Y: 0.0}
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    c64dda83ff22bd3a3c65b1bde60066d7:
+        Source: !file ../../Resources/UI sprites/UISheet.png
+        Name: buttonBigHover
+        TextureRegion: {X: 244, Y: 1405, Width: 658, Height: 200}
+        Center: {X: 0.0, Y: 0.0}
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    acb9fe11a8f3624c7ec402800d3db3bc:
+        Source: !file ../../Resources/UI sprites/UISheet.png
+        Name: buttonBigClick
+        TextureRegion: {X: 245, Y: 1656, Width: 661, Height: 200}
+        Center: {X: 0.0, Y: 0.0}
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    77d87570569b7f0ba3f9e37b823e06f2:
+        Source: !file ../../Resources/UI sprites/UISheet.png
+        Name: menuBackground
+        TextureRegion: {X: 149, Y: 1902, Width: 384, Height: 500}
+        Center: {X: 0.0, Y: 0.0}
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    7f8cb5962e66209e3afcfe31911e10e4:
+        Source: !file ../../Resources/UI sprites/BG.png
+        Name: Background
+        TextureRegion: {X: 0, Y: 0, Width: 1080, Height: 1920}
+        Center: {X: 0.0, Y: 0.0}
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    814caec3441b75d078b5bac905151bfe:
+        Source: !file ../../Resources/UI sprites/Misc/spacebarIcon.png
+        Name: spacebar
+        TextureRegion: {X: 0, Y: 0, Width: 128, Height: 128}
+        Center: {X: 0.0, Y: 0.0}
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    49801d95fba9b6fdefdddb9d3eda0948:
+        Source: !file ../../Resources/UI sprites/UISheet.png
+        Name: buttonThinkNormal
+        TextureRegion: {X: 910, Y: 1176, Width: 543, Height: 131}
+        Center: {X: 0.0, Y: 0.0}
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    d9d3e4c5d997f494aae01907da4d1e99:
+        Source: !file ../../Resources/UI sprites/UISheet.png
+        Name: buttonThinkHover
+        TextureRegion: {X: 911, Y: 1328, Width: 543, Height: 130}
+        Center: {X: 0.0, Y: 0.0}
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    7ad1bfb3684bcfc70a6515cad41465df:
+        Source: !file ../../Resources/UI sprites/UISheet.png
+        Name: buttonThinkClick
+        TextureRegion: {X: 914, Y: 1476, Width: 543, Height: 130}
+        Center: {X: 0.0, Y: 0.0}
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    ae62745abff9236b467257026f304378:
+        Source: !file ../../Resources/UI sprites/UISheet.png
+        Name: menuBackgroundDark
+        TextureRegion: {X: 576, Y: 1907, Width: 384, Height: 500}
+        Center: {X: 0.0, Y: 0.0}
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    3417b4a5da67841ba73e80f2be9a2cc7:
+        Source: !file ../../Resources/UI sprites/UISheet.png
+        Name: buttonSmallChecked
+        TextureRegion: {X: 927, Y: 1632, Width: 200, Height: 200}
+        Center: {X: 0.0, Y: 0.0}
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}

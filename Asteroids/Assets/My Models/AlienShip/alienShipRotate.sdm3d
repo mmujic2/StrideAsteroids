@@ -1,0 +1,15 @@
+!Model
+Id: 0cbc4c36-d51b-4866-9b35-510432e29a68
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Source: !file ../../../Resources/My models/AlienShip/alienShipRotate.fbx
+Skeleton: null
+PivotPosition: {X: 0.0, Y: 0.0, Z: 0.0}
+Materials:
+    729a293932cdc7576a7114b1f4360549:
+        Name: Material
+        MaterialInstance:
+            Material: a7bb0e26-7acc-4b2f-8ad8-411f950eb2b1:My Models/AlienShip/alienShipMaterial
+Modifiers: {}
+~SourceHashes:
+    c13516f19998d0987af657ab0c6ef59e~../../../Resources/My models/AlienShip/alienShipRotate.fbx: 7eef57e2360baca5632d28e071c747e6

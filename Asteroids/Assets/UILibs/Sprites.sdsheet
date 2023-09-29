@@ -1,0 +1,51 @@
+!SpriteSheet
+Id: d4738d25-6f06-4bd4-8ddb-b1566ba62210
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Type: Sprite2D
+ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
+IsCompressed: false
+Packing: {}
+Sprites:
+    9ec7c9dbfe17db274bee85e81bd0c5a9:
+        Source: !file ../../Resources/UI sprites/Spaceship renders/projectileShip.png
+        Name: projectileShip
+        TextureRegion: {X: 0, Y: 0, Width: 500, Height: 500}
+        Center: {X: 0.0, Y: 0.0}
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    ef27243503dd8e3e01f6f16ee42302fd:
+        Source: !file ../../Resources/My models/Asteroids/asteroid.png
+        Name: asteroid
+        TextureRegion: {X: 0, Y: 0, Width: 500, Height: 500}
+        Center: {X: 0.0, Y: 0.0}
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    cd0f757a1099a3fa5c8a1b8712d42c7f:
+        Source: !file ../../Resources/My models/AlienShip/alienShip.png
+        Name: alienShip
+        TextureRegion: {X: 0, Y: 0, Width: 500, Height: 500}
+        Center: {X: 0.0, Y: 0.0}
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    8e91eea2dd0201aee39bfda3c76b90b8:
+        Source: !file ../../Resources/UI sprites/Spaceship renders/agilityShip.png
+        Name: agilityShip
+        TextureRegion: {X: 0, Y: 0, Width: 500, Height: 500}
+        Center: {X: 0.0, Y: 0.0}
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    d2decb0e93c525c355fa2f119b6fad7f:
+        Source: !file ../../Resources/UI sprites/Spaceship renders/damageShip.png
+        Name: damageShip
+        TextureRegion: {X: 0, Y: 0, Width: 500, Height: 500}
+        Center: {X: 0.0, Y: 0.0}
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    8a7cbbf726d6670201801b309819a3a7:
+        Source: !file ../../Resources/UI sprites/Misc/rockletSprite.png
+        Name: Bomb
+        TextureRegion: {X: 0, Y: 0, Width: 500, Height: 500}
+        Center: {X: 0.0, Y: 0.0}
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}

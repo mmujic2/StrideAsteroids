@@ -1,0 +1,9 @@
+!Sound
+Id: bcf885f2-5778-4019-b09e-820e375bdad3
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Source: !file ../../../Resources/Audio/FX/alienOnScreen.mp3
+SampleRate: 48000
+CompressionRatio: 15
+StreamFromDisk: false
+Spatialized: false

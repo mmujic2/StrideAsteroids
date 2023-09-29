@@ -1,0 +1,39 @@
+!PrefabAsset
+Id: 32d46a5e-507e-4ba5-a08b-844a8a0e4dda
+SerializedVersion: {Stride: 3.1.0.1}
+Tags: []
+Hierarchy:
+    RootParts:
+        - ref!! d62ff04f-944b-483d-9764-2d6bd7973ace
+    Parts:
+        -   Entity:
+                Id: 0022641f-5c60-4bd6-b48b-0387881f7d5d
+                Name: projectileLaserModel
+                Components:
+                    61113a0700c691781b5469436c1b7655: !TransformComponent
+                        Id: 64377262-a0a9-4812-a966-849b8ed1bb2d
+                        Position: {X: -5.38826E-05, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 2.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    0c286f8652cf43561a98b27365a05b43: !ModelComponent
+                        Id: 6dc27267-ff71-462b-b37f-6af68dc7f451
+                        Model: 723cb774-5b6a-4337-bace-714281dbb7de:My Models/Projectiles/projectileLaser
+                        Materials: {}
+        -   Entity:
+                Id: d62ff04f-944b-483d-9764-2d6bd7973ace
+                Name: projectileLaser
+                Components:
+                    ac4f9e88534efa18add25eb3014f1515: !TransformComponent
+                        Id: 59163025-7983-45cc-ad74-a9958aac0c37
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            4197e1ebf335641b5ebaad47e54e9eb2: ref!! 64377262-a0a9-4812-a966-849b8ed1bb2d
+                    b77c9e238e32a957841932a246c8b6a1: !Asteroids.Projectile,Asteroids
+                        Id: 7e13b7d0-afa6-4723-a968-b95a8fc5c4b2
+                        fireSound: b0aa072a-a446-4067-a62b-972232af2af2:Audio/FX/laserProjectileFire
+                        hitSound: f56261d5-1fa3-4590-ada2-70b2688f4e38:Audio/FX/laserProjectileHit2
+                        damage: 4
+                        aliveTimeMax: 1.5

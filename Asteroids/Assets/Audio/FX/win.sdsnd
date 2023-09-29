@@ -1,0 +1,8 @@
+!Sound
+Id: ba1eb478-568c-4fe4-849f-2a0c931d1bd7
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Source: !file ../../../Resources/Audio/FX/win.mp3
+CompressionRatio: 15
+StreamFromDisk: false
+Spatialized: false

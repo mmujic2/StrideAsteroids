@@ -1,0 +1,8 @@
+!Sound
+Id: e3ace942-2a7b-4ad4-afba-a5a7bb1753ca
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Source: !file ../../../Resources/Audio/FX/bossTeleport.wav
+CompressionRatio: 15
+StreamFromDisk: false
+Spatialized: false

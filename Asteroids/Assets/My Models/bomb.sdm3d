@@ -1,0 +1,15 @@
+!Model
+Id: 596ad729-53ca-4d09-902a-d0a31f2b29ab
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Source: !file ../../Resources/My models/bomb.fbx
+Skeleton: null
+PivotPosition: {X: 0.0, Y: 0.0, Z: 0.0}
+Materials:
+    a810a0fcf014c550b362ccfb3ac166a9:
+        Name: Material
+        MaterialInstance:
+            Material: null
+Modifiers: {}
+~SourceHashes:
+    d686b43371c16435324ea65e571d48c8~../../Resources/My models/bomb.fbx: 28c4e92b01eb832d13f04950a484e420

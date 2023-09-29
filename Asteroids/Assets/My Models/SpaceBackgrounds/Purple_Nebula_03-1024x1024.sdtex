@@ -1,0 +1,8 @@
+!Texture
+Id: 973bfb05-538f-454e-8e7b-fec18fb768bf
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Source: !file ../../../Resources/My models/SpaceBackgrounds/space4.fbm/Purple_Nebula_03-1024x1024.png
+Type: !ColorTextureType
+    ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
+    PremultiplyAlpha: false

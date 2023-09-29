@@ -1,0 +1,8 @@
+!Sound
+Id: 8acdb2fb-9bf4-4890-a01f-4f7c60689ce0
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Source: !file ../../../Resources/Audio/FX/alienExplosion.wav
+CompressionRatio: 15
+StreamFromDisk: false
+Spatialized: false

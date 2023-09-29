@@ -1,0 +1,8 @@
+!Sound
+Id: a4160fa2-f1df-4416-b6c4-64967dfbc6fd
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Source: !file ../../../Resources/Audio/FX/rocketProjectileHit.mp3
+CompressionRatio: 15
+StreamFromDisk: false
+Spatialized: false

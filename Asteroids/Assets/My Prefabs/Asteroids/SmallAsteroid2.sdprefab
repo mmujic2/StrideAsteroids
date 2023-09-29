@@ -1,0 +1,36 @@
+!PrefabAsset
+Id: 08c065c6-5da3-4ced-9e6b-c7b0163583dc
+SerializedVersion: {Stride: 3.1.0.1}
+Tags: []
+Hierarchy:
+    RootParts:
+        - ref!! 3603cfd0-d893-4d15-aa4e-4ac859b041b5
+    Parts:
+        -   Entity:
+                Id: 3603cfd0-d893-4d15-aa4e-4ac859b041b5
+                Name: SmallAsteroid2
+                Components:
+                    3766be973202319351d7227b7aaaf1d5: !TransformComponent
+                        Id: e227f776-5e0b-4402-998b-b065a1587be1
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            5c3560b5b98b69718df67acdbf8123c5: ref!! 7741a970-faad-4e92-b50e-743f3d98b21e
+                    9366e6c3e904c51acf2560f0abfc0627: !Asteroids.Asteroid,Asteroids
+                        Id: 2684746b-6a1a-4be7-8e15-48a1cccc174b
+                        tier: 1
+        -   Entity:
+                Id: c2d5f4a6-dce5-4314-a6cf-2754dcbdf245
+                Name: SmallAsteroid2
+                Components:
+                    7467ef9c9d5efd0ac15a4c7d9d4c605e: !TransformComponent
+                        Id: 7741a970-faad-4e92-b50e-743f3d98b21e
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    56a711014e8a4c9d36679541f57122e9: !ModelComponent
+                        Id: dc159bbb-374a-4263-a11f-9c36f1d355a3
+                        Model: 77cb58b7-fd06-4de8-81c2-50a39f81cb41:My Models/Asteroids/SmallAsteroid2
+                        Materials: {}

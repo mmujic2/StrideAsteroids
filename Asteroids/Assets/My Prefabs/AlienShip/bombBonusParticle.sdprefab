@@ -1,0 +1,27 @@
+!PrefabAsset
+Id: b90ba263-a9aa-48ac-9f0c-e7abb6446ed6
+SerializedVersion: {Stride: 3.1.0.1}
+Tags: []
+Hierarchy:
+    RootParts:
+        - ref!! 4d35aa96-6bcf-4164-ad15-c4077801152a
+    Parts:
+        -   Entity:
+                Id: 4d35aa96-6bcf-4164-ad15-c4077801152a
+                Name: bombBonus
+                Components:
+                    a355485f7f1d7d6e4290588ffe5e6374: !TransformComponent
+                        Id: 2455afbd-e745-43e0-a9c4-70170c245b9b
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 10.0, Y: 10.0, Z: 10.0}
+                        Children: {}
+                    29e8a102d0e834a07a78fc87b65d8aa8: !UIComponent
+                        Id: 13b6ee5b-bc1a-4e52-9c0a-2c27b5006649
+                        Page: 4f7ae5b5-f636-4028-85e0-a565c5a5ce9c:UILibs/AlienBonusBomb
+                        IsFullScreen: false
+                        Resolution: {X: 1280.0, Y: 720.0, Z: 1000.0}
+                        Size: {X: 1.28, Y: 0.72, Z: 1.0}
+                    1c28550e4ca9358f4840a453780d6c39: !Asteroids.BombIncreaseParticleTimer,Asteroids
+                        Id: 129069df-12b1-4c8e-9864-24942a89e5b0
+                        aliveTimeMax: 2.5

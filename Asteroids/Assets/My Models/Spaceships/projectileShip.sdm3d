@@ -1,0 +1,15 @@
+!Model
+Id: 42766a93-5340-40fb-97ce-287096c164c2
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Source: !file ../../../Resources/My models/Shapeships/projectileShip.fbx
+Skeleton: null
+PivotPosition: {X: 0.0, Y: 0.0, Z: 0.0}
+Materials:
+    9274a31786071e633c9503b0bd9e1d09:
+        Name: Material
+        MaterialInstance:
+            Material: 55ff7aaa-2032-44cd-815f-4f098a0b4022:My Models/Spaceships/projectileShipMaterial
+Modifiers: {}
+~SourceHashes:
+    6fd289c473667ff031ece83ef68c2085~../../../Resources/My models/Shapeships/projectileShip.fbx: b44afb0b3844d86dbd57a325859cc52b

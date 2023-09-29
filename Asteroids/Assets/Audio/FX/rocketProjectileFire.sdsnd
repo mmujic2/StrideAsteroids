@@ -1,0 +1,9 @@
+!Sound
+Id: 6d7192e0-0702-4822-b3a3-50b7abef4775
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Source: !file ../../../Resources/Audio/FX/rocketProjectileFire.mp3
+SampleRate: 48000
+CompressionRatio: 15
+StreamFromDisk: false
+Spatialized: false

@@ -1,0 +1,8 @@
+!Texture
+Id: 0297c1b7-dce0-4344-a35e-229d85fae3c4
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Source: !file ../../../Resources/My models/SpaceBackgrounds/space2.fbm/Blue_Nebula_06-1024x1024.png
+Type: !ColorTextureType
+    ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
+    PremultiplyAlpha: false

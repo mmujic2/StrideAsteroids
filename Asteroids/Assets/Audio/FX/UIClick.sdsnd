@@ -1,0 +1,8 @@
+!Sound
+Id: 2967dd68-6284-456f-9db4-623bb18323e8
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Source: !file ../../../Resources/Audio/FX/UIClick.mp3
+CompressionRatio: 15
+StreamFromDisk: false
+Spatialized: false

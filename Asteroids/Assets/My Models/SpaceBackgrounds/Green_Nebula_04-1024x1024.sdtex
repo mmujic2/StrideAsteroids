@@ -1,0 +1,8 @@
+!Texture
+Id: 825ead4e-7ede-4771-aaeb-5053f850b519
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Source: !file ../../../Resources/My models/SpaceBackgrounds/space3.fbm/Green_Nebula_04-1024x1024.png
+Type: !ColorTextureType
+    ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
+    PremultiplyAlpha: false

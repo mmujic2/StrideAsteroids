@@ -1,0 +1,8 @@
+!Sound
+Id: f56261d5-1fa3-4590-ada2-70b2688f4e38
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Source: !file ../../../Resources/Audio/FX/laserProjectileHit2.wav
+CompressionRatio: 15
+StreamFromDisk: false
+Spatialized: false

@@ -1,0 +1,8 @@
+!Sound
+Id: 4e2b89db-e841-4c36-a67f-6e26eeef71db
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Source: !file ../../../Resources/Audio/FX/bombTravel.mp3
+CompressionRatio: 15
+StreamFromDisk: false
+Spatialized: false

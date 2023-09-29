@@ -1,0 +1,15 @@
+!Model
+Id: f3444d23-a9a9-4a7e-8329-e16e0df45afd
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Source: !file ../../../Resources/My models/Shapeships/damageShip.fbx
+Skeleton: null
+PivotPosition: {X: 0.0, Y: 0.0, Z: 0.0}
+Materials:
+    4ad406404acdbfa062114d930fe25ad7:
+        Name: aglityShipMaterial
+        MaterialInstance:
+            Material: 55ff7aaa-2032-44cd-815f-4f098a0b4022:My Models/Spaceships/projectileShipMaterial
+Modifiers: {}
+~SourceHashes:
+    d8854b2013069c46f0b591f06bd8631f~../../../Resources/My models/Shapeships/damageShip.fbx: 69e27e0dd685526b1b33748c28c6a079

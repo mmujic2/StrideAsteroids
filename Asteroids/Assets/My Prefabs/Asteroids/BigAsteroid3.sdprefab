@@ -1,0 +1,36 @@
+!PrefabAsset
+Id: 218a0fd9-f9ab-440a-91ff-0ba04d9230b3
+SerializedVersion: {Stride: 3.1.0.1}
+Tags: []
+Hierarchy:
+    RootParts:
+        - ref!! 637dd8c9-d05a-46f5-8da6-325f0f615c75
+    Parts:
+        -   Entity:
+                Id: 335f9df4-b82b-4959-908e-abeed7080862
+                Name: BigAsteroid3
+                Components:
+                    7467ef9c9d5efd0ac15a4c7d9d4c605e: !TransformComponent
+                        Id: d0c8094a-4c31-4df2-920d-d4f9cb89a9b0
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    56a711014e8a4c9d36679541f57122e9: !ModelComponent
+                        Id: f21599cc-a012-488c-9a04-9d8cef17b7a1
+                        Model: ec383531-22ea-42e7-8720-849b4dd6611c:My Models/Asteroids/BigAsteroid3
+                        Materials: {}
+        -   Entity:
+                Id: 637dd8c9-d05a-46f5-8da6-325f0f615c75
+                Name: BigAsteroid3
+                Components:
+                    3766be973202319351d7227b7aaaf1d5: !TransformComponent
+                        Id: d06c2d81-a700-4ffd-98ca-ced16cac852a
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            5c3560b5b98b69718df67acdbf8123c5: ref!! d0c8094a-4c31-4df2-920d-d4f9cb89a9b0
+                    9366e6c3e904c51acf2560f0abfc0627: !Asteroids.Asteroid,Asteroids
+                        Id: e1e5c2f4-cd28-40af-9811-42b1fe89642e
+                        tier: 3

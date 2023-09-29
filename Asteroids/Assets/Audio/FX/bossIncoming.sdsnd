@@ -1,0 +1,8 @@
+!Sound
+Id: 9a5a7d4f-2c85-4359-96e9-c6cbe9eb141c
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Source: !file ../../../Resources/Audio/FX/bossIncoming.wav
+CompressionRatio: 15
+StreamFromDisk: false
+Spatialized: false

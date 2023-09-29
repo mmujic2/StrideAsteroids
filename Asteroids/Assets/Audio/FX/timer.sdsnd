@@ -1,0 +1,8 @@
+!Sound
+Id: f4879933-4cfb-4332-8af0-98d254ba82fd
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Source: !file ../../../Resources/Audio/FX/timer.mp3
+CompressionRatio: 15
+StreamFromDisk: false
+Spatialized: false

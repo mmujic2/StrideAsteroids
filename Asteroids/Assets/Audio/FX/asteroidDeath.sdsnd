@@ -1,0 +1,9 @@
+!Sound
+Id: 2ef34579-cf94-4f62-8db9-602c8b78ef92
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Source: !file ../../../Resources/Audio/FX/asteroidDeath.mp3
+SampleRate: 48000
+CompressionRatio: 15
+StreamFromDisk: false
+Spatialized: false

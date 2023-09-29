@@ -1,0 +1,15 @@
+!Model
+Id: 82644908-cb0a-406d-9e4c-c353eaa57dd4
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Source: !file ../../../Resources/My models/projectilePellet.fbx
+Skeleton: null
+PivotPosition: {X: 0.0, Y: 0.0, Z: 0.0}
+Materials:
+    dac5d1a56f23f17ce5d2e293f0a7ad29:
+        Name: Material
+        MaterialInstance:
+            Material: 073eccd2-31ac-4c73-ab9e-d19be66fa9d9:My Models/Projectiles/projectilePelletMaterial
+Modifiers: {}
+~SourceHashes:
+    5255c0da2534ccafd5602409c7e26d4a~../../../Resources/My models/projectilePellet.fbx: 18dfc7691a35bf18b999df7e19b9431d

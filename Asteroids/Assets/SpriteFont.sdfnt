@@ -1,0 +1,7 @@
+!SpriteFont
+Id: 4a57aa4a-483b-4f52-98dd-541924abd0ca
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+FontSource: !FileFontProvider
+    Source: !file ../Resources/UI sprites/ethnocentric rg.otf
+FontType: !RuntimeRasterizedSpriteFontType {}

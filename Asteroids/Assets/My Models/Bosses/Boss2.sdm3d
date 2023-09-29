@@ -1,0 +1,15 @@
+!Model
+Id: 460d6a71-a53f-483f-aa1c-37b3ec02750f
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Source: !file ../../../Resources/My models/Bosses/Boss2.fbx
+Skeleton: null
+PivotPosition: {X: 0.0, Y: 0.0, Z: 0.0}
+Materials:
+    bfc9533e06fea43ef98e1fa6167763dc:
+        Name: Boss2Material
+        MaterialInstance:
+            Material: edcec3a7-304f-4c59-a99e-b5754fbc4389:My Models/Bosses/Boss2Material
+Modifiers: {}
+~SourceHashes:
+    f2af20600554c94099e220d917441786~../../../Resources/My models/Bosses/Boss2.fbx: d747928afb8cf64b1432e3c7e364e708

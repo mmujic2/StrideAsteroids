@@ -1,0 +1,9 @@
+!Sound
+Id: 129994e8-e50d-4e73-8729-8a9b5bde05f8
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Source: !file ../../../Resources/Audio/FX/shipDeath.mp3
+SampleRate: 48000
+CompressionRatio: 15
+StreamFromDisk: false
+Spatialized: false

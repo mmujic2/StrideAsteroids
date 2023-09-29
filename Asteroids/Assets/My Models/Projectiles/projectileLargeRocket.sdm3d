@@ -1,0 +1,15 @@
+!Model
+Id: 5c4395a1-7a04-4aaa-92f3-7e6d9ff9587b
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Source: !file ../../../Resources/My models/projectileLargeRocket.fbx
+Skeleton: null
+PivotPosition: {X: 0.0, Y: 0.0, Z: 0.0}
+Materials:
+    dfc9d89dc312ef91f584c653944cbfbd:
+        Name: aglityShipMaterial
+        MaterialInstance:
+            Material: 55ff7aaa-2032-44cd-815f-4f098a0b4022:My Models/Spaceships/projectileShipMaterial
+Modifiers: {}
+~SourceHashes:
+    8f0fb725c17af3912bc9b47b7967649c~../../../Resources/My models/projectileLargeRocket.fbx: 76fc85202c620bd41a043cc672bba0ff

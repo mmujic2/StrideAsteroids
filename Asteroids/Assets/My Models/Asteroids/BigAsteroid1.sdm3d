@@ -1,0 +1,15 @@
+!Model
+Id: e404cb09-b5f4-44be-9f2c-99e80350ea2f
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Source: !file ../../../Resources/My models/Asteroids/BigAsteroid1.fbx
+Skeleton: null
+PivotPosition: {X: 0.0, Y: 0.0, Z: 0.0}
+Materials:
+    50608de7d34e01f4558217cadf8e564b:
+        Name: RockMaterial
+        MaterialInstance:
+            Material: a280280d-ee01-477b-88e3-49d9e3a768bf:My Models/Asteroids/RockMaterial
+Modifiers: {}
+~SourceHashes:
+    1e483e7c84dab5337eb4b5940fa0648a~../../../Resources/My models/Asteroids/BigAsteroid1.fbx: f414068b40f0c3986a7f05d4cffabbb3

@@ -1,0 +1,52 @@
+!PrefabAsset
+Id: aa659ed8-c993-4280-a96e-6d1ba9c55192
+SerializedVersion: {Stride: 3.1.0.1}
+Tags: []
+Hierarchy:
+    RootParts:
+        - ref!! bd2eda59-45e8-4317-9ca7-efb47da14d08
+    Parts:
+        -   Entity:
+                Id: bd2eda59-45e8-4317-9ca7-efb47da14d08
+                Name: alienShip
+                Components:
+                    2254d79530b888577022b62e86222aec: !TransformComponent
+                        Id: c0288b22-7fe3-4573-aa3e-886efef4e734
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            756ad6f5b9351b68967cde52a0df8d22: ref!! 3bed254c-eb41-4e9e-91b7-c22e03ddd487
+                            b61a7dc78b4f77f1f8ed5e3c7e2d6825: ref!! 2a30724a-beb3-4840-bc1b-b20d2fc7aaf4
+                    abc3fb8c4e826f0eccb16e2b3b43bc76: !Asteroids.AlienShip,Asteroids
+                        Id: fa75e614-9113-4078-abeb-cb3aa51493a7
+                        projectilePelletPrefab: 104e1bc7-ebf3-4c8d-8cd6-485382cc3f22:My Prefabs/Projectiles/EnemyProjectilePellet
+                        rotatePart: ref!! c2185549-4dd5-4102-9a91-1a7bf8250dcb
+        -   Entity:
+                Id: c2185549-4dd5-4102-9a91-1a7bf8250dcb
+                Name: alienShipRotate
+                Components:
+                    bad02f76e72316a9eda64ed3c9622acf: !TransformComponent
+                        Id: 3bed254c-eb41-4e9e-91b7-c22e03ddd487
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    cef3bcb32f102c5760c1dfc908b57b54: !ModelComponent
+                        Id: 81d7c1fc-c9b4-4a92-912a-59c74b6fb89b
+                        Model: 0cbc4c36-d51b-4866-9b35-510432e29a68:My Models/AlienShip/alienShipRotate
+                        Materials: {}
+        -   Entity:
+                Id: c31d5006-60f8-4068-baf5-7022610d2d0e
+                Name: alienShipStatic
+                Components:
+                    0b4cd77a417acfaf9ba657373678de08: !TransformComponent
+                        Id: 2a30724a-beb3-4840-bc1b-b20d2fc7aaf4
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    b60b9fbd479debb1e22d113f15a4da6c: !ModelComponent
+                        Id: 1575ff2d-8323-45d9-95a7-3cd2300fdc67
+                        Model: 694a0c77-1fea-4cf9-bb2c-5d4958f5ea6f:My Models/AlienShip/alienShipStatic
+                        Materials: {}

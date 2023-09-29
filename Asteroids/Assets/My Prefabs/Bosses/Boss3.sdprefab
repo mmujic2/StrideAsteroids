@@ -1,0 +1,53 @@
+!PrefabAsset
+Id: 88985fe2-1675-4ee5-8997-6a03b78f4d53
+SerializedVersion: {Stride: 3.1.0.1}
+Tags: []
+Hierarchy:
+    RootParts:
+        - ref!! 00e115de-efb8-4ac7-b29e-96fa320d83d9
+    Parts:
+        -   Entity:
+                Id: 00e115de-efb8-4ac7-b29e-96fa320d83d9
+                Name: Boss3
+                Components:
+                    8fc908817a110ce8697cf4effdecde14: !TransformComponent
+                        Id: 3963ae9c-94b6-470c-a53c-1f5aae38cca1
+                        Position: {X: 0.0, Y: -0.6, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            93bafcd17c283a432182020414e9c5ef: ref!! bae5a049-341f-4293-9b12-61eb46ec890c
+                            880d2f4a324e4b4f1a7d0cb3dd0640a8: ref!! 61cee3e5-283c-4050-a661-5284ee4581c1
+                    3ec9d33e8423e4e865f601117e973776: !Asteroids.Boss3,Asteroids
+                        Id: 385609a9-97b3-4124-88a6-ed94605e6ec6
+                        TopPart: ref!! 6edd7543-b4af-41d4-ace9-44c0c5dd36bf
+                        BottomPart: ref!! f3210fb5-3e06-4801-b189-4ed0388446cf
+                        enemyMiniShipPrefab: b7b95953-8531-4a4a-b9c3-bae409ee6c65:My Prefabs/Projectiles/Boss3Projectile
+        -   Entity:
+                Id: 6edd7543-b4af-41d4-ace9-44c0c5dd36bf
+                Name: Boss3Top
+                Components:
+                    474950f36e820e55f51cf383b261c7bb: !TransformComponent
+                        Id: bae5a049-341f-4293-9b12-61eb46ec890c
+                        Position: {X: 0.0, Y: 0.25, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.38268346, Z: 0.0, W: 0.9238795}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    29732fad0fa0869beaeec042b80fee08: !ModelComponent
+                        Id: d5193225-81fa-4c51-96cf-b46ad361bfd3
+                        Model: 77773e80-20b1-43dc-9c4b-305432051caf:My Models/Bosses/Boss3
+                        Materials: {}
+        -   Entity:
+                Id: f3210fb5-3e06-4801-b189-4ed0388446cf
+                Name: Boss3Bottom
+                Components:
+                    474950f36e820e55f51cf383b261c7bb: !TransformComponent
+                        Id: 61cee3e5-283c-4050-a661-5284ee4581c1
+                        Position: {X: 0.0, Y: -0.25, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    29732fad0fa0869beaeec042b80fee08: !ModelComponent
+                        Id: a9319eb4-7eba-4cf9-8c7b-8a7fec53c556
+                        Model: 77773e80-20b1-43dc-9c4b-305432051caf:My Models/Bosses/Boss3
+                        Materials: {}

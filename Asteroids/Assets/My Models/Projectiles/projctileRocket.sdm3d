@@ -1,0 +1,15 @@
+!Model
+Id: 406b922e-a361-444d-8c74-328702359dd7
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Source: !file ../../../Resources/My models/projctileRocket.fbx
+Skeleton: null
+PivotPosition: {X: 0.0, Y: 0.0, Z: 0.0}
+Materials:
+    7544cf8831ad7bb2c949efd9f141e5d7:
+        Name: Material
+        MaterialInstance:
+            Material: 02ba5295-a58b-4de4-99ad-64e350835441:My Models/Projectiles/projectileRocketMaterial
+Modifiers: {}
+~SourceHashes:
+    70887c39dd56786cca9266b07215327b~../../../Resources/My models/projctileRocket.fbx: 6c37a92ad12d3eec4053395a05678167

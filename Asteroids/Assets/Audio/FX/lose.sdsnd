@@ -1,0 +1,8 @@
+!Sound
+Id: 448e4b17-cdd0-473b-a803-c8bbd8885f79
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Source: !file ../../../Resources/Audio/FX/lose.wav
+CompressionRatio: 15
+StreamFromDisk: false
+Spatialized: false

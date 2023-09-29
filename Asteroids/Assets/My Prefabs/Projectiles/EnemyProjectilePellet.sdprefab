@@ -1,0 +1,41 @@
+!PrefabAsset
+Id: 104e1bc7-ebf3-4c8d-8cd6-485382cc3f22
+SerializedVersion: {Stride: 3.1.0.1}
+Tags: []
+Hierarchy:
+    RootParts:
+        - ref!! 9fb20afd-9aef-4822-853f-d2be795928af
+    Parts:
+        -   Entity:
+                Id: 4c49f18b-f936-4083-ae70-80557960349a
+                Name: projectilePelletModel
+                Components:
+                    62593f8ee1f796ff13d5a964741f7a3c: !TransformComponent
+                        Id: 9c11146f-4bb3-40e4-a9a4-0f6996bd4518
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    e6fb4ff1b63f5114b8167001a5deffa8: !ModelComponent
+                        Id: 6d48308e-ce39-48cd-b008-1c4781f388fa
+                        Model: 82644908-cb0a-406d-9e4c-c353eaa57dd4:My Models/Projectiles/projectilePellet
+                        Materials:
+                            030476251321a2d65f51f40f2577bd50~0: 41d56ccd-4602-40d8-85b0-d7c9402ee7d3:My Models/AlienShip/alienGlow
+        -   Entity:
+                Id: 9fb20afd-9aef-4822-853f-d2be795928af
+                Name: enemyProjectilePellet
+                Components:
+                    9b3f1eeecfd861435e44ecdb77c83177: !TransformComponent
+                        Id: 4d2ba4ef-31ff-4a00-8e40-7f4510663ba7
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            67630bf044d93d4ffbab175a9ab65f55: ref!! 9c11146f-4bb3-40e4-a9a4-0f6996bd4518
+                    83dc9762cea1d6a36fc2551feb0b9821: !Asteroids.EnemyProjectile,Asteroids
+                        Id: 135deba6-2d5d-4fd9-817d-fd936ef968bd
+                        fireSound: 2a769a1d-8458-4d6d-8bf2-6dbd4db9d286:Audio/FX/alienShoot
+                        hitSound: null
+                        damage: 0
+                        aliveTimeMax: 2.5
+                        enemySpeed: 0.0

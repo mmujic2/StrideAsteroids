@@ -1,0 +1,6 @@
+!Texture
+Id: ef95c537-b432-41f1-8bf8-e744dffbaa61
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Source: !file ../../../Resources/My textures/Rock050_1K-JPG_Displacement.jpg
+Type: !NormalMapTextureType {}

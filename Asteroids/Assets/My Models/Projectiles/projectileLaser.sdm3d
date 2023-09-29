@@ -1,0 +1,15 @@
+!Model
+Id: 723cb774-5b6a-4337-bace-714281dbb7de
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Source: !file ../../../Resources/My models/projectileLaser.fbx
+Skeleton: null
+PivotPosition: {X: 0.0, Y: 0.0, Z: 0.0}
+Materials:
+    4612d407de9f730a3e8e87bc2895666c:
+        Name: projectileLaserMaterial
+        MaterialInstance:
+            Material: 5cc25b1e-1f44-4c5c-96c6-69e5127628f5:My Models/Projectiles/projectileLaserMaterial
+Modifiers: {}
+~SourceHashes:
+    3ec61f800d1b5fa90b7ce205f6d50cd2~../../../Resources/My models/projectileLaser.fbx: 47f011df39f7083dfd44f467cb7436f1

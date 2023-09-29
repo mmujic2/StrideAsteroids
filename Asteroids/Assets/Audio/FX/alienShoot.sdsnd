@@ -1,0 +1,8 @@
+!Sound
+Id: 2a769a1d-8458-4d6d-8bf2-6dbd4db9d286
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Source: !file ../../../Resources/Audio/FX/alienShoot.mp3
+CompressionRatio: 15
+StreamFromDisk: false
+Spatialized: false

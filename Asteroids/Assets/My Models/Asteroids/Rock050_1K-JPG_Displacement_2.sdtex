@@ -1,0 +1,7 @@
+!Texture
+Id: 5475b39c-8b7b-41c2-906a-0b7c63dc2714
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Source: !file ../../../Resources/My textures/Rock050_1K-JPG_Displacement.jpg
+Type: !ColorTextureType
+    ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}

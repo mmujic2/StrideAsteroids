@@ -1,0 +1,36 @@
+!PrefabAsset
+Id: 8adea33f-9c41-4e71-87c8-585a78aad731
+SerializedVersion: {Stride: 3.1.0.1}
+Tags: []
+Hierarchy:
+    RootParts:
+        - ref!! c9e935ef-d0eb-4f1e-8766-d2652022fc17
+    Parts:
+        -   Entity:
+                Id: 5571315a-82eb-4db5-9a76-aa06b735b746
+                Name: MediumAsteroid1
+                Components:
+                    7467ef9c9d5efd0ac15a4c7d9d4c605e: !TransformComponent
+                        Id: 378c3065-ef48-493d-8285-cf6cc71c629b
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    56a711014e8a4c9d36679541f57122e9: !ModelComponent
+                        Id: 55c738d7-55b9-4c45-93a8-679b36733cee
+                        Model: 6d2f84b2-8803-4816-aba4-ea3aa046eeb7:My Models/Asteroids/MediumAsteroid1
+                        Materials: {}
+        -   Entity:
+                Id: c9e935ef-d0eb-4f1e-8766-d2652022fc17
+                Name: MediumAsteroid1
+                Components:
+                    3766be973202319351d7227b7aaaf1d5: !TransformComponent
+                        Id: 257a4333-ffd5-4b56-b0cd-85fd8b7bbaeb
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            5c3560b5b98b69718df67acdbf8123c5: ref!! 378c3065-ef48-493d-8285-cf6cc71c629b
+                    9366e6c3e904c51acf2560f0abfc0627: !Asteroids.Asteroid,Asteroids
+                        Id: 923761f5-d867-4037-b57c-d39d56c41127
+                        tier: 2

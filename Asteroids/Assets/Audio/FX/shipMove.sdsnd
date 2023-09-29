@@ -1,0 +1,9 @@
+!Sound
+Id: d912fa85-2cc9-4912-8032-9a9fd112c152
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Source: !file ../../../Resources/Audio/FX/shipMove.mp3
+SampleRate: 48000
+CompressionRatio: 15
+StreamFromDisk: false
+Spatialized: false

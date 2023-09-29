@@ -1,0 +1,37 @@
+!SpriteSheet
+Id: 3d7bd0de-5011-4609-8767-688d311c24ab
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Type: UI
+ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
+IsCompressed: false
+Packing: {}
+Sprites:
+    4a5313b668ebb7a338e141d228b9d6c9:
+        Source: !file ../../Resources/UI sprites/space images/Blue_Nebula_04-1024x1024_bright.png
+        Name: stage1
+        TextureRegion: {X: 0, Y: 0, Width: 1024, Height: 1024}
+        Center: {X: 0.0, Y: 0.0}
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    28066f85f5311802fa6de25f9e82a078:
+        Source: !file ../../Resources/UI sprites/space images/Blue_Nebula_05-1024x1024.png
+        Name: stage2
+        TextureRegion: {X: 0, Y: 0, Width: 1024, Height: 1024}
+        Center: {X: 0.0, Y: 0.0}
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    2d3a23b0575687e6c6f101e8a8536784:
+        Source: !file ../../Resources/UI sprites/space images/Green_Nebula_04-1024x1024.png
+        Name: stage3
+        TextureRegion: {X: 0, Y: 0, Width: 1024, Height: 1024}
+        Center: {X: 0.0, Y: 0.0}
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    c56bf0eafd904b176e44a1266bd10828:
+        Source: !file ../../Resources/UI sprites/space images/Purple_Nebula_03-1024x1024.png
+        Name: stage4
+        TextureRegion: {X: 0, Y: 0, Width: 1024, Height: 1024}
+        Center: {X: 0.0, Y: 0.0}
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}

@@ -1,0 +1,15 @@
+!Model
+Id: 3a155c98-50c0-45b7-957b-d5b221a0c3f3
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Source: !file ../../../Resources/My models/Shapeships/agilityShip.fbx
+Skeleton: null
+PivotPosition: {X: 0.0, Y: 0.0, Z: 0.0}
+Materials:
+    35faa79ae3795f9c4498a112b615660d:
+        Name: aglityShipMaterial
+        MaterialInstance:
+            Material: 55ff7aaa-2032-44cd-815f-4f098a0b4022:My Models/Spaceships/projectileShipMaterial
+Modifiers: {}
+~SourceHashes:
+    d32543ceddd3e08af9a14428f4a0148d~../../../Resources/My models/Shapeships/agilityShip.fbx: ed6df2c5494d25b5a09e8ecd48af1349

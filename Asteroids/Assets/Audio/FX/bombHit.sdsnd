@@ -1,0 +1,8 @@
+!Sound
+Id: 5654542d-d608-4de6-8c70-1a79c981f6a7
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Source: !file ../../../Resources/Audio/FX/bombHit.mp3
+CompressionRatio: 15
+StreamFromDisk: false
+Spatialized: false

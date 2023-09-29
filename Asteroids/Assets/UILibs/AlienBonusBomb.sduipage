@@ -1,0 +1,65 @@
+!UIPageAsset
+Id: 4f7ae5b5-f636-4028-85e0-a565c5a5ce9c
+SerializedVersion: {Stride: 2.1.0.1}
+Tags: []
+Design:
+    Resolution: {X: 200.0, Y: 200.0, Z: 200.0}
+Hierarchy:
+    RootParts:
+        - !Grid ref!! 4e5b1993-733f-4d3f-b065-da8cf6b423dd
+    Parts:
+        -   UIElement: !ContentDecorator
+                Id: 454d924a-141f-4977-bc95-3b832c34127f
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                DrawLayerNumber: 2
+                Width: 30.0
+                Height: 30.0
+                Margin: {}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Padding: {}
+                BackgroundImage: !SpriteFromSheet
+                    Sheet: d4738d25-6f06-4bd4-8ddb-b1566ba62210:UILibs/Sprites
+                    CurrentFrame: 5
+        -   UIElement: !TextBlock
+                Id: 46f0334b-7e10-4638-a4ae-54c63c7a8b7b
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                VerticalAlignment: Center
+                Margin: {Right: 5.0}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Text: +1
+                Font: 4a57aa4a-483b-4f52-98dd-541924abd0ca:SpriteFont
+                TextSize: 20.0
+                TextColor: {R: 240, G: 240, B: 240, A: 255}
+        -   UIElement: !Grid
+                Id: 4e5b1993-733f-4d3f-b065-da8cf6b423dd
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Margin: {}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Children:
+                    8d832ef253eb10739f6edfc8bcb9da0a: !StackPanel ref!! c5460f05-176c-44ad-b19c-c6b32b83090e
+                RowDefinitions: {}
+                ColumnDefinitions: {}
+                LayerDefinitions: {}
+        -   UIElement: !StackPanel
+                Id: c5460f05-176c-44ad-b19c-c6b32b83090e
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                HorizontalAlignment: Center
+                VerticalAlignment: Center
+                Margin: {}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Children:
+                    417a3d653fb64d0853da2d02d11c7820: !TextBlock ref!! 46f0334b-7e10-4638-a4ae-54c63c7a8b7b
+                    bd1ff48b87ef742f2ef8034927434b61: !ContentDecorator ref!! 454d924a-141f-4977-bc95-3b832c34127f
+                Orientation: Horizontal
