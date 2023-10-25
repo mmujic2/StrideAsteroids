@@ -60,7 +60,6 @@ namespace Asteroids
 
         public override void Update()
         {
-
         }
     }
 }

@@ -462,6 +462,7 @@ Hierarchy:
                 DependencyProperties:
                     c286e33be9a2801a5e5c7f6ce50bf59e~Panel.ZIndexPropertyKey: 1
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Visibility: Hidden
                 HorizontalAlignment: Center
                 VerticalAlignment: Center
                 Margin: {}
@@ -769,7 +770,6 @@ Hierarchy:
                 DependencyProperties:
                     fc1244d54d2027e5c0e1da9d628e20ad~Panel.ZIndexPropertyKey: 1
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                Visibility: Collapsed
                 HorizontalAlignment: Center
                 VerticalAlignment: Center
                 Margin: {}
@@ -2929,16 +2929,17 @@ Hierarchy:
                 Id: e33d4639-045f-452d-9f69-267bcbf1afee
                 DependencyProperties: {}
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                Margin: {Bottom: 100.0}
+                Margin: {Bottom: 75.0}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
                 Name: title
-                Text: Asteroids
+                Text: Cosmic Asteroid mayhem
                 Font: 4a57aa4a-483b-4f52-98dd-541924abd0ca:SpriteFont
-                TextSize: 100.0
+                TextSize: 65.0
                 TextColor: {R: 240, G: 240, B: 240, A: 255}
                 TextAlignment: Center
+                WrapText: true
         -   UIElement: !ContentDecorator
                 Id: e61d4e68-d66d-4168-b6cd-48d27f57da95
                 DependencyProperties: {}
