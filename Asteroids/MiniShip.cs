@@ -36,7 +36,7 @@ namespace Asteroids
 
         public override void Kill()
         {
-            GameLogic.score += 25;
+            SinglePlayerLogic.score += 25;
 
             var particle = AlienShip.alienShipDestroyParticle.Clone();
             particle.Transform.Position = Entity.Transform.Position;
@@ -56,7 +56,7 @@ namespace Asteroids
             Entity.Transform.Position.X += speedX * (float) Game.UpdateTime.Elapsed.TotalSeconds * speedMultiplier;
             Entity.Transform.Position.Z += speedZ * (float) Game.UpdateTime.Elapsed.TotalSeconds * speedMultiplier;
 
-            var preferredDirection =  GameLogic.spaceShip.Transform.Position - Entity.Transform.Position;
+            var preferredDirection =  SinglePlayerLogic.spaceShip.Transform.Position - Entity.Transform.Position;
             preferredDirection.Normalize();
 
             if (direction.X < preferredDirection.X - 0.01f)

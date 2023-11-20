@@ -15,7 +15,7 @@ namespace Asteroids
     public class Spaceship : SyncScript
     {
         public static Entity spaceShipDestroyParticle;
-        public static Sound moveSound;
+        public Sound moveSound;
         public SoundInstance moveSoundInstance;
         public static Sound ShipDeathSound;
 
@@ -49,6 +49,11 @@ namespace Asteroids
         // When ship "respawns", it's invincible
         public bool isInvincible;
 
+        public Keys shootProjectile = Keys.None;
+        public Keys moveForward = Keys.None;
+        public Keys rotateLeft = Keys.None;
+        public Keys rotateRight = Keys.None;
+
         public override void Cancel()
         {
             if(moveSoundInstance.PlayState == Stride.Media.PlayState.Playing)
@@ -57,6 +62,16 @@ namespace Asteroids
 
         public override void Start()
         {
+            // Keys aren't initialized previously
+            if(shootProjectile != Keys.None)
+            {
+                shootProjectile = Keys.Space;
+                moveForward = Keys.Up;
+                rotateLeft = Keys.Left;
+                rotateRight = Keys.Right;
+            }
+            
+
             if (Entity.GetChildren().Count() > 2)
                 trailParticle = Entity.GetChild(2);
 
@@ -68,6 +83,7 @@ namespace Asteroids
 
             projectileRocket = projectileRocketPrefab.Instantiate().First();
 
+            moveSound = SoundScript.LoadShipMoveSound(Content);
             moveSoundInstance = moveSound.CreateInstance();
             moveSoundInstance.Volume = 0.25f;
             moveSoundInstance.IsLooping = true;
@@ -79,35 +95,48 @@ namespace Asteroids
             {
                 Move();
 
-                if (Input.IsKeyReleased(Keys.Space))
+                if (Input.IsKeyReleased(shootProjectile))
                 {
-                    int projectileCount = 0;
-                    foreach (var entity in MainScript.projectilesScene.Entities)
-                    {
-                        // Scene can also contain particles
-                        if (entity.Get<Projectile>() != null) projectileCount++;
-                    }
-
-                    if (projectileCount < maxProjectilesOnScreen)
+                    if(CheckIfCanShoot())
                         Shoot();
                 }
 
-                if(GameLogic.numberOfBombs > 0 && (Input.IsKeyReleased(Keys.LeftCtrl) || Input.IsKeyReleased(Keys.RightCtrl)))
+                if(SinglePlayerLogic.numberOfBombs > 0 && (Input.IsKeyReleased(Keys.LeftCtrl) || Input.IsKeyReleased(Keys.RightCtrl)))
                 {
-                    GameLogic.numberOfBombs--;
+                    SinglePlayerLogic.numberOfBombs--;
                     ShootBomb();
                 }
 
                 // If game is over, don't process collisions (player can't die)
-                if (!isInvincible && !GameLogic.isGameOver)
+                if (!isInvincible && !SinglePlayerLogic.isGameOver)
                 {
-                    var enemyEntity = Utils.CheckIfEnemyIsInRange(Entity, new Vector2(sizeX, sizeY));
-                    if (enemyEntity != null)
-                    {
-                        enemyEntity.currentHp -= 10;
-                        Kill();
-                    }
+                    CheckIfDead();
                 }
+            }
+        }
+
+        protected virtual bool CheckIfCanShoot()
+        {
+            int projectileCount = 0;
+            foreach (var entity in MainScript.projectilesScene.Entities)
+            {
+                // Scene can also contain particles
+                if (entity.Get<Projectile>() != null) projectileCount++;
+            }
+
+            if (projectileCount < maxProjectilesOnScreen)
+                return true;
+
+            return false;
+        }
+
+        protected virtual void CheckIfDead()
+        {
+            var enemyEntity = Utils.CheckIfEnemyIsInRange(Entity, new Vector2(sizeX, sizeY));
+            if (enemyEntity != null)
+            {
+                enemyEntity.currentHp -= 10;
+                Kill();
             }
         }
 
@@ -122,7 +151,7 @@ namespace Asteroids
             direction = imaginaryPointWorldPosition - spaceShipWorldPosition;
             direction.Normalize();
 
-            if (Input.IsKeyDown(Keys.Up))
+            if (Input.IsKeyDown(moveForward))
             {
                 currentXSpeed += direction.X * acceleration * (float)Game.UpdateTime.Elapsed.TotalSeconds * 2.5f;
                 currentZSpeed += direction.Z * acceleration * (float)Game.UpdateTime.Elapsed.TotalSeconds * 2.5f;
@@ -155,9 +184,9 @@ namespace Asteroids
             Utils.CheckIfEntityOutsideMapAndFix(Entity);
 
             // Rotation
-            if (Input.IsKeyDown(Keys.Right))
+            if (Input.IsKeyDown(rotateRight))
                 Entity.Transform.Rotation *= Quaternion.RotationY(-5.0f * acceleration * (float) Game.UpdateTime.Elapsed.TotalSeconds);
-            else if (Input.IsKeyDown(Keys.Left))
+            else if (Input.IsKeyDown(rotateLeft))
                 Entity.Transform.Rotation *= Quaternion.RotationY(5.0f * acceleration * (float)Game.UpdateTime.Elapsed.TotalSeconds);
         }
 
@@ -170,6 +199,9 @@ namespace Asteroids
             projectile.Transform.Rotation = Quaternion.RotationY(Utils.GetAngleXAxis2D(new Vector2(direction.X, direction.Z)));
 
             var projectileClass = projectile.Get<Projectile>();
+
+            projectileClass.spaceShip = Entity;
+
             projectileClass.speedX = direction.X * 4 * acceleration + currentXSpeed;
             projectileClass.speedZ = direction.Z * 4 * acceleration + currentZSpeed;
 
@@ -216,26 +248,37 @@ namespace Asteroids
             if (moveSoundInstance.PlayState == Stride.Media.PlayState.Playing)
                 moveSoundInstance.Pause();
 
-            if (GameLogic.numberOfLives > 0)
+            if (SinglePlayerLogic.numberOfLives > 0)
             {
                 var countdown = new CountdownScript();
                 countdown.countdownType = CountdownScript.CountdownType.spaceShipDead;
                 countdown.maxTimer = 2.0;
+                countdown.spaceShip = Entity;
 
                 MainScript.Camera.Add(countdown);
 
-                GameLogic.numberOfLives--;
+                SubtractLife();
             }
             else
             {
-                Utils.PlaySound(SoundScript.loseSound);
-
-                UIScript.GameOverPanel.Visibility = Visibility.Visible;
-                UIScript.GameOverTitle.Text = "Game over";
-                UIScript.GameOverInfo.Text = "All lives lost";
-                UIScript.HideGameOverButton.Visibility = Visibility.Hidden;
-                GameLogic.isGameOver = true;
+                LoseGame();
             }
+        }
+
+        protected virtual void SubtractLife()
+        {
+            SinglePlayerLogic.numberOfLives--;
+        }
+
+        protected virtual void LoseGame()
+        {
+            Utils.PlaySound(SoundScript.loseSound);
+
+            UIScript.GameOverPanel.Visibility = Visibility.Visible;
+            UIScript.GameOverTitle.Text = "Game over";
+            UIScript.GameOverInfo.Text = "All lives lost";
+            UIScript.HideGameOverButton.Visibility = Visibility.Hidden;
+            SinglePlayerLogic.isGameOver = true;
         }
     }
 }

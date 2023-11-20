@@ -40,7 +40,7 @@ namespace Asteroids
             prevPosition = Entity.Transform.Position;
             Entity.Dispose();
 
-            nextPosition = GameLogic.spaceShip.Transform.Position;
+            nextPosition = SinglePlayerLogic.spaceShip.Transform.Position;
 
             shootCooldown = Math.Max(0.75, 5.0 / speed);
             shootTimer = 0;
@@ -51,7 +51,7 @@ namespace Asteroids
         public override void Update()
         {
             shootTimer += Game.UpdateTime.Elapsed.TotalSeconds;
-            if(shootTimer >= shootCooldown && !GameLogic.spaceShip.Get<Spaceship>().isDead)
+            if(shootTimer >= shootCooldown && !SinglePlayerLogic.spaceShip.Get<Spaceship>().isDead)
             {
                 shootTimer = 0;
                 Shoot();
@@ -73,12 +73,12 @@ namespace Asteroids
                 prevPosition = Entity.Transform.Position;
 
                 // prevent alien from camping spawn position
-                if(!GameLogic.spaceShip.Get<Spaceship>().isDead)
-                    nextPosition = GameLogic.spaceShip.Transform.Position;
+                if(!SinglePlayerLogic.spaceShip.Get<Spaceship>().isDead)
+                    nextPosition = SinglePlayerLogic.spaceShip.Transform.Position;
                 else
                 {
                     var rand = new Random();
-                    nextPosition = new Vector3(GameLogic.mapSizeX * ((float) rand.NextDouble() - 0.5f), 0, GameLogic.mapSizeZ * ((float)rand.NextDouble() - 0.5f));
+                    nextPosition = new Vector3(SinglePlayerLogic.mapSizeX * ((float) rand.NextDouble() - 0.5f), 0, SinglePlayerLogic.mapSizeZ * ((float)rand.NextDouble() - 0.5f));
                 }
                     
                 
@@ -94,7 +94,7 @@ namespace Asteroids
 
         private void Shoot()
         {
-            var direction = GameLogic.spaceShip.Transform.Position.XZ() - Entity.Transform.Position.XZ();
+            var direction = SinglePlayerLogic.spaceShip.Transform.Position.XZ() - Entity.Transform.Position.XZ();
             direction.Normalize();
 
             var newProjectile = projectilePellet.Clone();
@@ -112,8 +112,8 @@ namespace Asteroids
         public override void Kill()
         {
             Utils.PlaySound(AlienDeathSound, 0.2f);
-            GameLogic.score += (int)(50 * speed);
-            GameLogic.numberOfBombs++;
+            SinglePlayerLogic.score += (int)(50 * speed);
+            SinglePlayerLogic.numberOfBombs++;
 
             // Explosion
             var particle = alienShipDestroyParticle.Clone();

@@ -15,12 +15,14 @@ ExplicitFolders: []
 Bundles: []
 TemplateFolders: []
 RootAssets:
+    - 00b94ff8-7e8e-4cab-bc64-45135e0cb3fb:My Prefabs/MultiplayerVsProjectiles/ProjectileRocket
     - 01a75e8a-d6d8-4b9c-a64a-a920f62dae37:My Prefabs/Asteroids/SmallAsteroid1
     - 08c065c6-5da3-4ced-9e6b-c7b0163583dc:My Prefabs/Asteroids/SmallAsteroid2
     - 0d5ed79c-c92c-4e95-b4b1-35e1e570aa97:My Prefabs/Spaceships/projectileShip
     - 129994e8-e50d-4e73-8729-8a9b5bde05f8:Audio/FX/shipDeath
     - 139cded1-09e0-4556-82a0-24efb63819d7:ChildrenScenes/enemiesScene
     - 160365fa-692f-4d9d-9905-c6020f2d0614:Audio/Music/bossMusic
+    - 167e2459-c169-4997-b7de-f03ac6701d72:My Prefabs/MultiplayerVsSpaceShips/agilityShip
     - 1f4bdcb1-b065-49ec-9491-1e3669bc5fca:My Prefabs/Asteroids/BigAsteroid2
     - 218a0fd9-f9ab-440a-91ff-0ba04d9230b3:My Prefabs/Asteroids/BigAsteroid3
     - 2967dd68-6284-456f-9db4-623bb18323e8:Audio/FX/UIClick
@@ -39,6 +41,7 @@ RootAssets:
     - 725d1780-02f2-4429-9d0d-925242cfbf17:My Prefabs/Bosses/Boss4
     - 76b3d361-e4ca-4a58-8ee3-1219266f950b:Audio/FX/bossDeath
     - 7d9cec22-34b4-4cb3-a542-55ee06e1469d:My VFX/rocketHit
+    - 7e3495f3-1c81-4f35-9bd2-7834c1ff5256:My Prefabs/MultiplayerVsProjectiles/ProjectileLaser
     - 81d01138-bb6c-4be8-9000-66bc2cd2e6eb:UILibs/GameUI
     - 88985fe2-1675-4ee5-8997-6a03b78f4d53:My Prefabs/Bosses/Boss3
     - 8acdb2fb-9bf4-4890-a01f-4f7c60689ce0:Audio/FX/alienExplosion
@@ -52,6 +55,8 @@ RootAssets:
     - ba1eb478-568c-4fe4-849f-2a0c931d1bd7:Audio/FX/win
     - bcf885f2-5778-4019-b09e-820e375bdad3:Audio/FX/alienOnScreen
     - bd5d3b06-a651-43e2-928d-a6bfe8e3091a:My Prefabs/Asteroids/SmallAsteroid3
+    - bd8f281f-9118-4d62-8a30-72752725765e:My Prefabs/MultiplayerVsSpaceShips/projectileShip
+    - bfa809db-8242-4380-bafe-c0b03f233528:My Prefabs/MultiplayerVsProjectiles/ProjectileLargeRocket
     - bfb3093a-3a06-47ff-9880-852c7a532942:Audio/FX/extraLife
     - c1f3809d-c761-4eb2-beda-360543b3c4a5:My Prefabs/Bosses/Boss2
     - d4738d25-6f06-4bd4-8ddb-b1566ba62210:UILibs/Sprites
@@ -60,3 +65,4 @@ RootAssets:
     - e3ace942-2a7b-4ad4-afba-a5a7bb1753ca:Audio/FX/bossTeleport
     - ec38d8a8-8e19-4978-8dfb-5a9386f1b73a:My Prefabs/Asteroids/MediumAsteroid3
     - f4879933-4cfb-4332-8af0-98d254ba82fd:Audio/FX/timer
+    - fa587b27-597f-4b81-a398-31a92914b8cb:My Prefabs/MultiplayerVsSpaceShips/damageShip

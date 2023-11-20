@@ -34,6 +34,7 @@ Hierarchy:
                             67630bf044d93d4ffbab175a9ab65f55: ref!! 9c11146f-4bb3-40e4-a9a4-0f6996bd4518
                     83dc9762cea1d6a36fc2551feb0b9821: !Asteroids.EnemyProjectile,Asteroids
                         Id: 135deba6-2d5d-4fd9-817d-fd936ef968bd
+                        spaceShip: null
                         fireSound: 2a769a1d-8458-4d6d-8bf2-6dbd4db9d286:Audio/FX/alienShoot
                         hitSound: null
                         damage: 0

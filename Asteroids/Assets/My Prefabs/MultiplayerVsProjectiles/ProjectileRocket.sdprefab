@@ -1,38 +1,42 @@
 !PrefabAsset
-Id: 4103c6bd-95f4-452b-a6fc-6c8c58aeb0f4
+Id: 00b94ff8-7e8e-4cab-bc64-45135e0cb3fb
 SerializedVersion: {Stride: 3.1.0.1}
 Tags: []
 Hierarchy:
     RootParts:
-        - ref!! 6b791619-5d8c-49ef-b136-52a641f245d0
+        - ref!! 25ee4887-163a-4ddc-93ab-f9cd3ed3e5de
     Parts:
         -   Entity:
-                Id: 21cf3375-8d80-4f0c-adeb-a458c1954458
-                Name: bomb
+                Id: 25ee4887-163a-4ddc-93ab-f9cd3ed3e5de
+                Name: projectileRocket
                 Components:
-                    3391ab72379cbef8207891d050539b27: !TransformComponent
-                        Id: 7b72cb33-497d-4b6b-9050-1462b072ed01
+                    9b3f1eeecfd861435e44ecdb77c83177: !TransformComponent
+                        Id: 5fa0a9c1-4ea8-417c-a4e6-06760ca7075f
                         Position: {X: 0.0, Y: 0.0, Z: 0.0}
-                        Rotation: {X: 0.0, Y: 1.0, Z: 0.0, W: -4.371139E-08}
-                        Scale: {X: 2.0, Y: 2.0, Z: 2.0}
-                        Children: {}
-                    3d586d76f5567152a428022459040902: !ModelComponent
-                        Id: d3136e28-f93d-4219-8ecf-8019b4fa5817
-                        Model: 596ad729-53ca-4d09-902a-d0a31f2b29ab:My Models/bomb
-                        Materials:
-                            a634d458a00e8a1c14a5ea4ff82e3cdc~0: a7bb0e26-7acc-4b2f-8ad8-411f950eb2b1:My Models/AlienShip/alienShipMaterial
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            67630bf044d93d4ffbab175a9ab65f55: ref!! efecff82-d91e-48cd-ae97-54464081b214
+                            43eca0bf5b26b88d658e603761d10291: ref!! 047d4088-02c9-45c2-85b1-cdacc2757dd8
+                    7bd7f08ee9874dbec3ba2ba4c1ed201b: !Asteroids.MultiplayerVSProjectile,Asteroids
+                        Id: 9d4e9f46-6c38-4afd-ad95-7cfceddc86df
+                        spaceShip: null
+                        fireSound: 6d7192e0-0702-4822-b3a3-50b7abef4775:Audio/FX/rocketProjectileFire
+                        hitSound: a4160fa2-f1df-4416-b6c4-64967dfbc6fd:Audio/FX/rocketProjectileHit
+                        damage: 5
+                        aliveTimeMax: 2.5
         -   Entity:
-                Id: 252f19ea-48be-437f-ac7d-062323e42cf9
+                Id: 25f6b052-1f42-42b7-bbdb-f7d03faf65de
                 Name: Meteoritetrail
                 Components:
                     eb6c3948932fc2468a226a48364fc232: !TransformComponent
-                        Id: 5d9837de-49eb-4143-b463-97d9a4194fe4
-                        Position: {X: -0.052794028, Y: 0.0, Z: 0.0}
+                        Id: 047d4088-02c9-45c2-85b1-cdacc2757dd8
+                        Position: {X: 0.0, Y: 0.0, Z: 0.054093733}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 0.2, Y: 1.0, Z: 1.0}
+                        Scale: {X: 0.1, Y: 0.1, Z: 1.0}
                         Children: {}
                     e8942245f4d83244ac2eaebee7fe00a8: !ParticleSystemComponent
-                        Id: ce9920a2-460c-4b18-be0e-513d24ba0313
+                        Id: 20fa0e0b-0b10-44eb-8407-ed47dfd5718f
                         Control:
                             ResetSeconds: 0.0
                             Control: Play
@@ -516,22 +520,16 @@ Hierarchy:
                                                             TangentType: Linear
                                             SeedOffset: 0
         -   Entity:
-                Id: 6b791619-5d8c-49ef-b136-52a641f245d0
-                Name: bomb
+                Id: 2c8d8594-19ce-4507-ab8f-e15730051de5
+                Name: projectileRocketModel
                 Components:
-                    94d9819549c77e3b2213ea17e5649f7e: !TransformComponent
-                        Id: d20eb2e4-df48-4c55-982a-5d5e6ea610e8
+                    62593f8ee1f796ff13d5a964741f7a3c: !TransformComponent
+                        Id: efecff82-d91e-48cd-ae97-54464081b214
                         Position: {X: 0.0, Y: 0.0, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children:
-                            ffdceb3e432eaf3beca0cf56d154df71: ref!! 7b72cb33-497d-4b6b-9050-1462b072ed01
-                            ff2418df2e76e9e03b7ae8629e2ca301: ref!! 5d9837de-49eb-4143-b463-97d9a4194fe4
-                    dd7058a8832714b0867485eea065cbc8: !Asteroids.Bomb,Asteroids
-                        Id: 45cd79b9-0811-4c99-b013-84cf38065d5f
-                        spaceShip: null
-                        fireSound: 6d7192e0-0702-4822-b3a3-50b7abef4775:Audio/FX/rocketProjectileFire
-                        hitSound: 5654542d-d608-4de6-8c70-1a79c981f6a7:Audio/FX/bombHit
-                        damage: 25
-                        aliveTimeMax: 7.5
-                        bombMove: 4e2b89db-e841-4c36-a67f-6e26eeef71db:Audio/FX/bombTravel
+                        Children: {}
+                    e6fb4ff1b63f5114b8167001a5deffa8: !ModelComponent
+                        Id: 1f9b1171-b13f-44b6-98e4-f87e70d25117
+                        Model: 406b922e-a361-444d-8c74-328702359dd7:My Models/Projectiles/projctileRocket
+                        Materials: {}

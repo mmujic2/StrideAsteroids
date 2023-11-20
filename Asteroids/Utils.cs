@@ -13,17 +13,17 @@ namespace Asteroids
     {
         public static void CheckIfEntityOutsideMapAndFix(Entity entity)
         {
-            if (Math.Abs(entity.Transform.Position.X) > GameLogic.mapSizeX)
-                entity.Transform.Position.X = -Math.Sign(entity.Transform.Position.X) * GameLogic.mapSizeX; 
+            if (Math.Abs(entity.Transform.Position.X) > SinglePlayerLogic.mapSizeX)
+                entity.Transform.Position.X = -Math.Sign(entity.Transform.Position.X) * SinglePlayerLogic.mapSizeX; 
 
             // Fix Z separately because of UI being in the way
-            if (entity.Transform.Position.Z > GameLogic.mapSizeZ)
+            if (entity.Transform.Position.Z > SinglePlayerLogic.mapSizeZ)
             {
-                entity.Transform.Position.Z = -GameLogic.mapSizeZ + 0.35f;
+                entity.Transform.Position.Z = -SinglePlayerLogic.mapSizeZ + 0.35f;
             }
-            else if(entity.Transform.Position.Z < -GameLogic.mapSizeZ + 0.35f)
+            else if(entity.Transform.Position.Z < -SinglePlayerLogic.mapSizeZ + 0.35f)
             {
-                entity.Transform.Position.Z = GameLogic.mapSizeZ;
+                entity.Transform.Position.Z = SinglePlayerLogic.mapSizeZ;
             }
                 
         }
@@ -72,9 +72,9 @@ namespace Asteroids
 
         public static int GetSpriteFrameFromShipName()
         {
-            if(GameLogic.spaceShip != null)
+            if(SinglePlayerLogic.spaceShip != null)
             {
-                switch (GameLogic.spaceShip.Name)
+                switch (SinglePlayerLogic.spaceShip.Name)
                 {
                     case "projectileShip": return 0;
                     case "agilityShip": return 3;

@@ -1,5 +1,6 @@
 ﻿using Stride.Core.Mathematics;
 using Stride.Engine;
+using Stride.UI;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,6 +12,15 @@ namespace Asteroids
     // Global class that keeps track of misc stuff (points, bombs etc.)
     public class ArcadeModeLogic : GameLogic
     {
+        public static int score;
+        public static int numberOfLives;
+        public static int numberOfBombs;
+
+        public static Entity spaceShip;
+
+        // The more aliens get spawned, the stronger they become
+        public static int nextLiveScore;
+
         double countdownBeforeNextSpawn;
         double timer;
         int currentNumberOfAsteroids;
@@ -21,6 +31,20 @@ namespace Asteroids
             currentNumberOfAsteroids = 3;
             countdownBeforeNextSpawn = 2.0;
             SpawnAsteroids();
+
+            spaceShip = spaceShip.Clone();
+
+            numberOfLives = 3;
+            numberOfBombs = 3;
+
+            Entity.Scene.Entities.Add(spaceShip);
+
+            nextLiveScore = 2500;
+
+            UIScript.LivesCountText.Text = "x" + numberOfLives.ToString();
+            UIScript.BombsCountText.Text = "x" + numberOfBombs.ToString();
+
+            score = 0;
         }
 
         public override void Update()
@@ -39,6 +63,37 @@ namespace Asteroids
                     numberOfAliensSpawned = 0;
                     SpawnAsteroids();
                 }
+            }
+
+            // Doesn't need to be called every frame, but it's a small game so performance isn't that important
+            UIScript.LivesCountText.Text = "x" + numberOfLives.ToString();
+            UIScript.BombsCountText.Text = "x" + numberOfBombs.ToString();
+
+            // !isGameOver to avoid text change when game over
+            if (!isGameOver && Input.IsKeyReleased(Stride.Input.Keys.Escape))
+            {
+                if (UIScript.GameOverPanel.Visibility != Visibility.Visible)
+                    UIScript.GameOverPanel.Visibility = Visibility.Visible;
+                else
+                    UIScript.GameOverPanel.Visibility = Visibility.Collapsed;
+
+                UIScript.GameOverTitle.Text = "";
+                UIScript.GameOverInfo.Text = "";
+                UIScript.HideGameOverButton.Visibility = Visibility.Visible;
+            }
+
+            alienShipSpawnTimer += Game.UpdateTime.Elapsed.TotalSeconds;
+            if (!isGameOver && alienShipSpawnTimer > alienShipSpawnMaxTimer)
+            {
+                alienShipSpawnTimer = 0;
+                SpawnAlien();
+            }
+
+            if (score - nextLiveScore > 0)
+            {
+                numberOfLives++;
+                nextLiveScore += 2500;
+                Utils.PlaySound(SoundScript.ExtraLife);
             }
 
         }

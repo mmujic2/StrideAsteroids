@@ -550,6 +550,8 @@ Hierarchy:
                             0347142e4af3d2d9adf672b0ba70a87a: ref!! 2aa1724e-1cee-49ee-92fe-a7da86ac4d5b
                     ff962b40ca6db2f7294eff5e4db6bf5a: !Asteroids.Spaceship,Asteroids
                         Id: e0346c36-0cae-4af7-8a99-c4a27f0fe959
+                        moveSound: null
+                        moveSoundInstance: null
                         acceleration: 0.85
                         maxSpeed: 5.0
                         maxProjectilesOnScreen: 8
@@ -558,6 +560,10 @@ Hierarchy:
                         projectileRocketPrefab: d5911316-0a7c-449d-acf3-469f12b6b513:My Prefabs/Projectiles/ProjectileRocket
                         isDead: false
                         isInvincible: false
+                        shootProjectile: None
+                        moveForward: None
+                        rotateLeft: None
+                        rotateRight: None
                     3df1622a97582031f7083dca17af498e: !ModelComponent
                         Id: 87acbf72-e882-41d6-b8eb-f1dbe88393a3
                         Model: 82644908-cb0a-406d-9e4c-c353eaa57dd4:My Models/Projectiles/projectilePellet

@@ -26,7 +26,6 @@ namespace Asteroids
 
         public static void LoadSounds(ContentManager content)
         {
-            Spaceship.moveSound = content.Load<Sound>("Audio/FX/shipMove");
             UIClickSound = content.Load<Sound>("Audio/FX/UIClick");
 
             Spaceship.ShipDeathSound = content.Load<Sound>("Audio/FX/shipDeath");
@@ -52,6 +51,11 @@ namespace Asteroids
             var sound = UIClickSound.CreateInstance();
             sound.Volume = 0.1f;
             sound.Play();
+        }
+
+        public static Sound LoadShipMoveSound(ContentManager content) 
+        {
+            return content.Load<Sound>("Audio/FX/shipMove");
         }
     }
 }

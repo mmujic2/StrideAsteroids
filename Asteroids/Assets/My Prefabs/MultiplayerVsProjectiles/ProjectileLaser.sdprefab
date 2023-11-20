@@ -1,0 +1,40 @@
+!PrefabAsset
+Id: 7e3495f3-1c81-4f35-9bd2-7834c1ff5256
+SerializedVersion: {Stride: 3.1.0.1}
+Tags: []
+Hierarchy:
+    RootParts:
+        - ref!! 414babba-6516-4fc8-b5cd-7f8da65365fe
+    Parts:
+        -   Entity:
+                Id: 414babba-6516-4fc8-b5cd-7f8da65365fe
+                Name: projectileLaser
+                Components:
+                    ac4f9e88534efa18add25eb3014f1515: !TransformComponent
+                        Id: 47528601-9696-4497-9cde-b234b56da49d
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            4197e1ebf335641b5ebaad47e54e9eb2: ref!! cf1d5535-4fe8-48c0-bd84-505c9753bf20
+                    f37110e7c4c662facf99d548cbe3ac04: !Asteroids.MultiplayerVSProjectile,Asteroids
+                        Id: 56e5c8e8-2d41-4b1d-9fd2-90a3e4198b5a
+                        spaceShip: null
+                        fireSound: b0aa072a-a446-4067-a62b-972232af2af2:Audio/FX/laserProjectileFire
+                        hitSound: f56261d5-1fa3-4590-ada2-70b2688f4e38:Audio/FX/laserProjectileHit2
+                        damage: 4
+                        aliveTimeMax: 1.5
+        -   Entity:
+                Id: ea811dce-c9a8-48d7-af05-e923f8235b63
+                Name: projectileLaserModel
+                Components:
+                    61113a0700c691781b5469436c1b7655: !TransformComponent
+                        Id: cf1d5535-4fe8-48c0-bd84-505c9753bf20
+                        Position: {X: -5.38826E-05, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 2.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    0c286f8652cf43561a98b27365a05b43: !ModelComponent
+                        Id: a0c2816a-439a-4bf5-8641-363efb34a9ae
+                        Model: 723cb774-5b6a-4337-bace-714281dbb7de:My Models/Projectiles/projectileLaser
+                        Materials: {}

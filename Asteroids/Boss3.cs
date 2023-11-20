@@ -51,7 +51,7 @@ namespace Asteroids
                 shootCooldown = Math.Max(0.75f, (currentHp + 250.0f) / 250.0f);
 
                 shootTimer += Game.UpdateTime.Elapsed.TotalSeconds;
-                if (shootTimer >= shootCooldown && !GameLogic.spaceShip.Get<Spaceship>().isDead)
+                if (shootTimer >= shootCooldown && !SinglePlayerLogic.spaceShip.Get<Spaceship>().isDead)
                 {
                     shootTimer = 0;
                     Shoot();
@@ -98,7 +98,7 @@ namespace Asteroids
         public override void Kill()
         {
             isDead = true;
-            GameLogic.isGameOver = true;
+            SinglePlayerLogic.isGameOver = true;
 
             if (CampaignModeLogic.bossMusic.PlayState == Stride.Media.PlayState.Playing)
                 CampaignModeLogic.bossMusic.Stop();
@@ -113,14 +113,14 @@ namespace Asteroids
         {
             switch(numberOfProjectilesFired % 8)
             {
-                case 0: return new Vector3(-GameLogic.mapSizeX, 0f, 0f);                    // Left
-                case 1: return new Vector3(-GameLogic.mapSizeX, 0f, -GameLogic.mapSizeZ);   // Top left
-                case 2: return new Vector3(0f, 0f, -GameLogic.mapSizeZ);                    // Top
-                case 3: return new Vector3(GameLogic.mapSizeX, 0f, -GameLogic.mapSizeZ);    // Top right
-                case 4: return new Vector3(GameLogic.mapSizeX, 0f, 0f);                     // Right
-                case 5: return new Vector3(GameLogic.mapSizeX, 0f, GameLogic.mapSizeZ);     // Bottom right (don't ask why +z is bottom and -z is top)
-                case 6: return new Vector3(0f, 0f, GameLogic.mapSizeZ);                     // Bottom
-                case 7: return new Vector3(-GameLogic.mapSizeX, 0f, GameLogic.mapSizeZ);    // Bottom left
+                case 0: return new Vector3(-SinglePlayerLogic.mapSizeX, 0f, 0f);                    // Left
+                case 1: return new Vector3(-SinglePlayerLogic.mapSizeX, 0f, -SinglePlayerLogic.mapSizeZ);   // Top left
+                case 2: return new Vector3(0f, 0f, -SinglePlayerLogic.mapSizeZ);                    // Top
+                case 3: return new Vector3(SinglePlayerLogic.mapSizeX, 0f, -SinglePlayerLogic.mapSizeZ);    // Top right
+                case 4: return new Vector3(SinglePlayerLogic.mapSizeX, 0f, 0f);                     // Right
+                case 5: return new Vector3(SinglePlayerLogic.mapSizeX, 0f, SinglePlayerLogic.mapSizeZ);     // Bottom right (don't ask why +z is bottom and -z is top)
+                case 6: return new Vector3(0f, 0f, SinglePlayerLogic.mapSizeZ);                     // Bottom
+                case 7: return new Vector3(-SinglePlayerLogic.mapSizeX, 0f, SinglePlayerLogic.mapSizeZ);    // Bottom left
                 default: return new Vector3();
             }
         }

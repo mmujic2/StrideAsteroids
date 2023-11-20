@@ -12,21 +12,33 @@ namespace Asteroids
     {
         // Stride's instancing can be very slow, so it's best to instantiate some used entities at load time to avoid freezes while playing
         public static Dictionary<string, Entity> spaceShips;
+        public static Dictionary<string, Entity> multiplayerVsSpaceShips;
         public static Dictionary<string, Entity> bosses;
         public static Entity bossTeleport;
 
         public static void InstantiateEntites(ContentManager content)
         {
-            spaceShips = new();
-            spaceShips.Add("projectileShip", content.Load<Prefab>("My Prefabs/Spaceships/projectileShip").Instantiate().First());
-            spaceShips.Add("agilityShip", content.Load<Prefab>("My Prefabs/Spaceships/agilityShip").Instantiate().First());
-            spaceShips.Add("damageShip", content.Load<Prefab>("My Prefabs/Spaceships/damageShip").Instantiate().First());
+            spaceShips = new()
+            {
+                { "projectileShip", content.Load<Prefab>("My Prefabs/Spaceships/projectileShip").Instantiate().First() },
+                { "agilityShip", content.Load<Prefab>("My Prefabs/Spaceships/agilityShip").Instantiate().First() },
+                { "damageShip", content.Load<Prefab>("My Prefabs/Spaceships/damageShip").Instantiate().First() }
+            };
 
-            bosses = new();
-            bosses.Add("stage1", content.Load<Prefab>("My Prefabs/Bosses/Boss1").Instantiate().First());
-            bosses.Add("stage2", content.Load<Prefab>("My Prefabs/Bosses/Boss2").Instantiate().First());
-            bosses.Add("stage3", content.Load<Prefab>("My Prefabs/Bosses/Boss3").Instantiate().First());
-            bosses.Add("stage4", content.Load<Prefab>("My Prefabs/Bosses/Boss4").Instantiate().First());
+            bosses = new()
+            {
+                { "stage1", content.Load<Prefab>("My Prefabs/Bosses/Boss1").Instantiate().First() },
+                { "stage2", content.Load<Prefab>("My Prefabs/Bosses/Boss2").Instantiate().First() },
+                { "stage3", content.Load<Prefab>("My Prefabs/Bosses/Boss3").Instantiate().First() },
+                { "stage4", content.Load<Prefab>("My Prefabs/Bosses/Boss4").Instantiate().First() }
+            };
+
+            multiplayerVsSpaceShips = new()
+            {
+                { "projectileShip", content.Load<Prefab>("My Prefabs/MultiplayerVsSpaceShips/projectileShip").Instantiate().First() },
+                { "agilityShip", content.Load<Prefab>("My Prefabs/MultiplayerVsSpaceShips/agilityShip").Instantiate().First() },
+                { "damageShip", content.Load<Prefab>("My Prefabs/MultiplayerVsSpaceShips/damageShip").Instantiate().First() }
+            };
 
             Spaceship.spaceShipDestroyParticle = content.Load<Prefab>("My VFX/spaceShipDestroy").Instantiate().First();
             Spaceship.bomb = content.Load<Prefab>("My Prefabs/bomb").Instantiate().First(); 

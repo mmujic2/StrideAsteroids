@@ -9,9 +9,9 @@ using System.Threading.Tasks;
 
 namespace Asteroids
 {
-    public class CampaignModeLogic : GameLogic
+    public abstract class CampaignModeLogic : GameLogic
     {
-        bool isBossStarted;
+        public static bool isBossStarted;
         public static Entity Boss;
         // Sounds are all over the place because creating centralized sound management is too much effort
         public static SoundInstance bossStartSound;
@@ -19,6 +19,7 @@ namespace Asteroids
 
         private static int numberOfDronesSpawned;
         private static double droneTimer;
+        public static int score;
 
         public override void Cancel()
         {
@@ -40,14 +41,20 @@ namespace Asteroids
             bossMusic.Volume = 0.5f;
 
             numberOfDronesSpawned = 0;
+
+            score = 0;
+
+            UIScript.ScoreText.Text = "Score: " + score.ToString();
         }
 
         public override void Update()
         {
             base.Update();
 
+            UIScript.ScoreText.Text = "Score: " + score.ToString();
+
             // Only one boss per map
-            if(!isBossStarted && MainScript.enemiesScene.Entities.Count == 0)
+            if (!isBossStarted && MainScript.enemiesScene.Entities.Count == 0)
             {
                 isBossStarted = true;
                 bossStartSound.Play();
@@ -107,7 +114,7 @@ namespace Asteroids
                     var z = ((float)rand.NextDouble() - 0.5f) * mapSizeZ * 2.0f;
 
                     // avoid spawning asteroid close to player
-                    if (Utils.CheckIfInRange2D(spaceShip.Transform.Position, new Vector3(x, 0, z), 1.0f, 1.0f))
+                    if (CheckIfShouldSpawnAsteroid(x, z))
                     {
                         i--;
                         continue;
@@ -133,7 +140,7 @@ namespace Asteroids
                     var z = ((float)rand.NextDouble() - 0.5f) * mapSizeZ * 2.0f;
 
                     // avoid spawning asteroid close to player
-                    if (Utils.CheckIfInRange2D(spaceShip.Transform.Position, new Vector3(x, 0, z), 1.0f, 1.0f))
+                    if (CheckIfShouldSpawnAsteroid(x, z))
                     {
                         i--;
                         continue;
@@ -156,7 +163,7 @@ namespace Asteroids
                     var z = ((float)rand.NextDouble() - 0.5f) * mapSizeZ * 2.0f;
 
                     // avoid spawning asteroid close to player
-                    if (Utils.CheckIfInRange2D(spaceShip.Transform.Position, new Vector3(x, 0, z), 1.0f, 1.0f))
+                    if (CheckIfShouldSpawnAsteroid(x, z))
                     {
                         i--;
                         continue;
@@ -182,7 +189,7 @@ namespace Asteroids
                     var z = ((float)rand.NextDouble() - 0.5f) * mapSizeZ * 2.0f;
 
                     // avoid spawning asteroid close to player
-                    if (Utils.CheckIfInRange2D(spaceShip.Transform.Position, new Vector3(x, 0, z), 1.0f, 1.0f))
+                    if (CheckIfShouldSpawnAsteroid(x, z))
                     {
                         i--;
                         continue;
@@ -205,7 +212,7 @@ namespace Asteroids
                     var z = ((float)rand.NextDouble() - 0.5f) * mapSizeZ * 2.0f;
 
                     // avoid spawning asteroid close to player
-                    if (Utils.CheckIfInRange2D(spaceShip.Transform.Position, new Vector3(x, 0, z), 1.0f, 1.0f))
+                    if (CheckIfShouldSpawnAsteroid(x, z))
                     {
                         i--;
                         continue;
@@ -228,7 +235,7 @@ namespace Asteroids
                     var z = ((float)rand.NextDouble() - 0.5f) * mapSizeZ * 2.0f;
 
                     // avoid spawning asteroid close to player
-                    if (Utils.CheckIfInRange2D(spaceShip.Transform.Position, new Vector3(x, 0, z), 1.0f, 1.0f))
+                    if (CheckIfShouldSpawnAsteroid(x, z))
                     {
                         i--;
                         continue;
@@ -254,7 +261,7 @@ namespace Asteroids
                     var z = ((float)rand.NextDouble() - 0.5f) * mapSizeZ * 2.0f;
 
                     // avoid spawning asteroid close to player
-                    if (Utils.CheckIfInRange2D(spaceShip.Transform.Position, new Vector3(x, 0, z), 1.0f, 1.0f))
+                    if (CheckIfShouldSpawnAsteroid(x, z))
                     {
                         i--;
                         continue;
@@ -277,7 +284,7 @@ namespace Asteroids
                     var z = ((float)rand.NextDouble() - 0.5f) * mapSizeZ * 2.0f;
 
                     // avoid spawning asteroid close to player
-                    if (Utils.CheckIfInRange2D(spaceShip.Transform.Position, new Vector3(x, 0, z), 1.0f, 1.0f))
+                    if (CheckIfShouldSpawnAsteroid(x, z))
                     {
                         i--;
                         continue;
@@ -320,14 +327,14 @@ namespace Asteroids
         {
             switch (numberOfDronesSpawned % 8)
             {
-                case 0: return new Vector3(-GameLogic.mapSizeX, 0f, 0f);                    // Left
-                case 1: return new Vector3(-GameLogic.mapSizeX, 0f, -GameLogic.mapSizeZ);   // Top left
-                case 2: return new Vector3(0f, 0f, -GameLogic.mapSizeZ);                    // Top
-                case 3: return new Vector3(GameLogic.mapSizeX, 0f, -GameLogic.mapSizeZ);    // Top right
-                case 4: return new Vector3(GameLogic.mapSizeX, 0f, 0f);                     // Right
-                case 5: return new Vector3(GameLogic.mapSizeX, 0f, GameLogic.mapSizeZ);     // Bottom right (don't ask why +z is bottom and -z is top)
-                case 6: return new Vector3(0f, 0f, GameLogic.mapSizeZ);                     // Bottom
-                case 7: return new Vector3(-GameLogic.mapSizeX, 0f, GameLogic.mapSizeZ);    // Bottom left
+                case 0: return new Vector3(-SinglePlayerLogic.mapSizeX, 0f, 0f);                    // Left
+                case 1: return new Vector3(-SinglePlayerLogic.mapSizeX, 0f, -SinglePlayerLogic.mapSizeZ);   // Top left
+                case 2: return new Vector3(0f, 0f, -SinglePlayerLogic.mapSizeZ);                    // Top
+                case 3: return new Vector3(SinglePlayerLogic.mapSizeX, 0f, -SinglePlayerLogic.mapSizeZ);    // Top right
+                case 4: return new Vector3(SinglePlayerLogic.mapSizeX, 0f, 0f);                     // Right
+                case 5: return new Vector3(SinglePlayerLogic.mapSizeX, 0f, SinglePlayerLogic.mapSizeZ);     // Bottom right (don't ask why +z is bottom and -z is top)
+                case 6: return new Vector3(0f, 0f, SinglePlayerLogic.mapSizeZ);                     // Bottom
+                case 7: return new Vector3(-SinglePlayerLogic.mapSizeX, 0f, SinglePlayerLogic.mapSizeZ);    // Bottom left
                 default: return new Vector3();
             }
         }
@@ -347,5 +354,7 @@ namespace Asteroids
                 default: return new Vector3();
             }
         }
+
+        public abstract bool CheckIfShouldSpawnAsteroid(float posX, float posZ);
     }
 }

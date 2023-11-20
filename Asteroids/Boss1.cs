@@ -37,7 +37,7 @@ namespace Asteroids
         {
             particles = new List<Entity>() { rightParticle, leftParticle, topParticle, bottomParticle };
             prevPosition = new Vector3();
-            nextPosition = new Vector3(GameLogic.mapSizeX - 0.75f, 0.0f, GameLogic.mapSizeZ - 0.75f);
+            nextPosition = new Vector3(SinglePlayerLogic.mapSizeX - 0.75f, 0.0f, SinglePlayerLogic.mapSizeZ - 0.75f);
 
             sizeX = 0.75f;
             sizeY = 0.75f;
@@ -57,7 +57,7 @@ namespace Asteroids
                 shootCooldown = Math.Max(0.25f, currentHp / 150.0f);
 
                 shootTimer += Game.UpdateTime.Elapsed.TotalSeconds;
-                if (shootTimer >= shootCooldown && !GameLogic.spaceShip.Get<Spaceship>().isDead)
+                if (shootTimer >= shootCooldown && !SinglePlayerLogic.spaceShip.Get<Spaceship>().isDead)
                 {
                     shootTimer = 0;
                     Shoot();
@@ -73,7 +73,7 @@ namespace Asteroids
         public override void Kill()
         {
             isDead = true;
-            GameLogic.isGameOver = true;
+            SinglePlayerLogic.isGameOver = true;
 
             if (CampaignModeLogic.bossMusic.PlayState == Stride.Media.PlayState.Playing)
                 CampaignModeLogic.bossMusic.Stop();
@@ -105,22 +105,22 @@ namespace Asteroids
                 // Move in a square around map
                 if (nextPosition.X > 0 && nextPosition.Z > 0)
                 {
-                    nextPosition = new Vector3(GameLogic.mapSizeX - 0.5f, 0.0f, -GameLogic.mapSizeZ + 0.5f);
+                    nextPosition = new Vector3(SinglePlayerLogic.mapSizeX - 0.5f, 0.0f, -SinglePlayerLogic.mapSizeZ + 0.5f);
                     bottomParticle.Transform.Scale = new Vector3(1.0f, 1.0f, 1.0f);
                 }
                 else if (nextPosition.X > 0 && nextPosition.Z < 0)
                 {
-                    nextPosition = new Vector3(-GameLogic.mapSizeX + 0.5f, 0.0f, -GameLogic.mapSizeZ + 0.5f);
+                    nextPosition = new Vector3(-SinglePlayerLogic.mapSizeX + 0.5f, 0.0f, -SinglePlayerLogic.mapSizeZ + 0.5f);
                     rightParticle.Transform.Scale = new Vector3(1.0f, 1.0f, 1.0f);
                 }
                 else if (nextPosition.X < 0 && nextPosition.Z < 0)
                 {
-                    nextPosition = new Vector3(-GameLogic.mapSizeX + 0.5f, 0.0f, GameLogic.mapSizeZ - 0.5f);
+                    nextPosition = new Vector3(-SinglePlayerLogic.mapSizeX + 0.5f, 0.0f, SinglePlayerLogic.mapSizeZ - 0.5f);
                     topParticle.Transform.Scale = new Vector3(1.0f, 1.0f, 1.0f);
                 }
                 else if (nextPosition.X < 0 && nextPosition.Z > 0)
                 {
-                    nextPosition = new Vector3(GameLogic.mapSizeX - 0.5f, 0.0f, GameLogic.mapSizeZ - 0.5f);
+                    nextPosition = new Vector3(SinglePlayerLogic.mapSizeX - 0.5f, 0.0f, SinglePlayerLogic.mapSizeZ - 0.5f);
                     leftParticle.Transform.Scale = new Vector3(1.0f, 1.0f, 1.0f);
                 }
 
@@ -134,7 +134,7 @@ namespace Asteroids
 
         protected void Shoot()
         {
-            var direction = GameLogic.spaceShip.Transform.Position.XZ() - Entity.Transform.Position.XZ();
+            var direction = SinglePlayerLogic.spaceShip.Transform.Position.XZ() - Entity.Transform.Position.XZ();
             direction.Normalize();
 
             var newProjectile = projectilePellet.Clone();

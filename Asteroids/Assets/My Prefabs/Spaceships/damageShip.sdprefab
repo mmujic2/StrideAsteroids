@@ -1045,6 +1045,8 @@ Hierarchy:
                             0347142e4af3d2d9adf672b0ba70a87a: ref!! e057eb55-8ac3-4dad-bc14-5b8643628a7a
                     ff962b40ca6db2f7294eff5e4db6bf5a: !Asteroids.Spaceship,Asteroids
                         Id: 116e4e66-3c13-4fc7-83d6-ce6ceff80231
+                        moveSound: null
+                        moveSoundInstance: null
                         acceleration: 0.6
                         maxSpeed: 5.0
                         maxProjectilesOnScreen: 4
@@ -1053,3 +1055,7 @@ Hierarchy:
                         projectileRocketPrefab: 87d62a33-5c23-47f0-85c0-70a53e5175a8:My Prefabs/Projectiles/ProjectileLargeRocket
                         isDead: false
                         isInvincible: false
+                        shootProjectile: None
+                        moveForward: None
+                        rotateLeft: None
+                        rotateRight: None

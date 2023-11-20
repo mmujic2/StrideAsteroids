@@ -33,6 +33,7 @@ Hierarchy:
                             4197e1ebf335641b5ebaad47e54e9eb2: ref!! 64377262-a0a9-4812-a966-849b8ed1bb2d
                     b77c9e238e32a957841932a246c8b6a1: !Asteroids.Projectile,Asteroids
                         Id: 7e13b7d0-afa6-4723-a968-b95a8fc5c4b2
+                        spaceShip: null
                         fireSound: b0aa072a-a446-4067-a62b-972232af2af2:Audio/FX/laserProjectileFire
                         hitSound: f56261d5-1fa3-4590-ada2-70b2688f4e38:Audio/FX/laserProjectileHit2
                         damage: 4

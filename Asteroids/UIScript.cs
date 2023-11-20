@@ -26,6 +26,8 @@ namespace Asteroids
 
         public static StackPanel ShipSelectPanel;
 
+        public static StackPanel ShipSelectMulti;
+
         // Game menu elements
         public static StackPanel TopBarPanel;
         public static ContentDecorator LivesDecorator;
@@ -70,6 +72,7 @@ namespace Asteroids
             HowToPlayPanel = MenuGrid.FindVisualChildOfType<Grid>("HowToPlay");
             MapSelectPanel = MenuGrid.FindVisualChildOfType<StackPanel>("MapSelect");
             ShipSelectPanel = MenuGrid.FindVisualChildOfType<StackPanel>("ShipSelect");
+            ShipSelectMulti = MenuGrid.FindVisualChildOfType<StackPanel>("ShipSelectMulti");
 
             TitleScreenPanel.Visibility = Visibility.Visible;
             HowToPlayPanel.Visibility = Visibility.Collapsed;
@@ -248,7 +251,7 @@ namespace Asteroids
                         button.State = ToggleState.Checked;
 
                         // Set corresponding ship
-                        GameLogic.spaceShip = EntityPooling.spaceShips[button.Name];
+                        SinglePlayerLogic.spaceShip = EntityPooling.spaceShips[button.Name];
 
                         startButton.Visibility = Visibility.Visible;
                     };
@@ -271,6 +274,68 @@ namespace Asteroids
 
                 // Small detail (change ship lives icon to currently selected ship)
                 ((SpriteFromSheet)LivesDecorator.BackgroundImage).CurrentFrame = Utils.GetSpriteFrameFromShipName();
+
+                // Avoid instantly starting game, do it through a countdown script instead
+                var countdown = new CountdownScript();
+                countdown.maxTimer = 3.0;
+
+                Entity.Add(countdown);
+            };
+        }
+
+        private void InitializeShipSelectMulti()
+        {
+            var backButton = ShipSelectPanel.FindVisualChildOfType<StackPanel>("OptionButtons").FindVisualChildOfType<Button>("back");
+            var startButton = ShipSelectPanel.FindVisualChildOfType<StackPanel>("OptionButtons").FindVisualChildOfType<Button>("start");
+            var shipSelectionAllPanel = ShipSelectMulti.FindVisualChildOfType<UniformGrid>("ShipSelectionAll");
+
+            int i = 0;
+            foreach(var ShipSelection in shipSelectionAllPanel.Children)
+            {
+                var buttons = ShipSelectPanel.FindVisualChildOfType<StackPanel>("ShipSelection").Children;
+
+                foreach (var element in buttons)
+                {
+                    var button = element as ToggleButton;
+                    if (button != null)
+                    {
+                        button.State = ToggleState.UnChecked;
+
+                        button.Click += delegate
+                        {
+                            SoundScript.PlayUISound();
+
+                            // Uncheck all buttons
+                            foreach (var element2 in buttons)
+                            {
+                                var button2 = element2 as ToggleButton;
+                                if (button2 != null)
+                                    button2.State = ToggleState.UnChecked;
+                            }
+
+                            button.State = ToggleState.Checked;
+
+                            // Set corresponding ship
+                            // SinglePlayerLogic.spaceShip = EntityPooling.spaceShips[button.Name];
+                            MultiplayerVSLogic.SpaceShipSelection[i] = EntityPooling.multiplayerVsSpaceShips[button.Name];
+
+                            startButton.Visibility = Visibility.Visible;
+                        };
+                    }
+                }
+
+                i++;
+            }
+
+            startButton.Click += delegate
+            {
+                SoundScript.PlayUISound();
+
+                RootElement.FindVisualChildOfType<Grid>("Menu").Visibility = Visibility.Collapsed;
+                RootElement.FindVisualChildOfType<Grid>("Game").Visibility = Visibility.Visible;
+
+                // Small detail (change ship lives icon to currently selected ship)
+                // ((SpriteFromSheet)LivesDecorator.BackgroundImage).CurrentFrame = Utils.GetSpriteFrameFromShipName();
 
                 // Avoid instantly starting game, do it through a countdown script instead
                 var countdown = new CountdownScript();
@@ -304,16 +369,16 @@ namespace Asteroids
             {
                 SoundScript.PlayUISound();
 
-                Entity.Remove<GameLogic>();
+                Entity.Remove<SinglePlayerLogic>();
 
-                if (GameLogic.spaceShip.Scene != null)
-                    GameLogic.spaceShip.Scene.Entities.Remove(GameLogic.spaceShip);
+                if (SinglePlayerLogic.spaceShip.Scene != null)
+                    SinglePlayerLogic.spaceShip.Scene.Entities.Remove(SinglePlayerLogic.spaceShip);
 
                 // Remove all countdown scripts
                 while (Entity.Get<CountdownScript>() != null)
                     Entity.Remove<CountdownScript>();
 
-                GameLogic.spaceShip.Dispose();
+                SinglePlayerLogic.spaceShip.Dispose();
                 MainScript.enemiesScene.Entities.Clear();
                 MainScript.projectilesScene.Entities.Clear();
                 MainScript.particlesScene.Entities.Clear();
@@ -339,6 +404,7 @@ namespace Asteroids
             HowToPlayPanel.Visibility = Visibility.Collapsed;
             MapSelectPanel.Visibility = Visibility.Collapsed;
             ShipSelectPanel.Visibility = Visibility.Collapsed;
+            ShipSelectMulti.Visibility = Visibility.Collapsed;
 
             GameOverPanel.Visibility = Visibility.Collapsed;
 

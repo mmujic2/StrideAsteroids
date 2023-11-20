@@ -1,42 +1,27 @@
 !PrefabAsset
-Id: 4103c6bd-95f4-452b-a6fc-6c8c58aeb0f4
+Id: bd8f281f-9118-4d62-8a30-72752725765e
 SerializedVersion: {Stride: 3.1.0.1}
 Tags: []
 Hierarchy:
     RootParts:
-        - ref!! 6b791619-5d8c-49ef-b136-52a641f245d0
+        - ref!! a8315949-77a9-431e-927e-761a58b1a080
     Parts:
         -   Entity:
-                Id: 21cf3375-8d80-4f0c-adeb-a458c1954458
-                Name: bomb
-                Components:
-                    3391ab72379cbef8207891d050539b27: !TransformComponent
-                        Id: 7b72cb33-497d-4b6b-9050-1462b072ed01
-                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
-                        Rotation: {X: 0.0, Y: 1.0, Z: 0.0, W: -4.371139E-08}
-                        Scale: {X: 2.0, Y: 2.0, Z: 2.0}
-                        Children: {}
-                    3d586d76f5567152a428022459040902: !ModelComponent
-                        Id: d3136e28-f93d-4219-8ecf-8019b4fa5817
-                        Model: 596ad729-53ca-4d09-902a-d0a31f2b29ab:My Models/bomb
-                        Materials:
-                            a634d458a00e8a1c14a5ea4ff82e3cdc~0: a7bb0e26-7acc-4b2f-8ad8-411f950eb2b1:My Models/AlienShip/alienShipMaterial
-        -   Entity:
-                Id: 252f19ea-48be-437f-ac7d-062323e42cf9
+                Id: 64d904e2-6e80-4e10-8428-5113041e934f
                 Name: Meteoritetrail
                 Components:
                     eb6c3948932fc2468a226a48364fc232: !TransformComponent
-                        Id: 5d9837de-49eb-4143-b463-97d9a4194fe4
-                        Position: {X: -0.052794028, Y: 0.0, Z: 0.0}
+                        Id: a7064600-69aa-43a3-87a0-7cc07cf6f9ce
+                        Position: {X: 0.29281747, Y: 0.0, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 0.2, Y: 1.0, Z: 1.0}
+                        Scale: {X: 0.25, Y: 0.25, Z: 0.25}
                         Children: {}
                     e8942245f4d83244ac2eaebee7fe00a8: !ParticleSystemComponent
-                        Id: ce9920a2-460c-4b18-be0e-513d24ba0313
+                        Id: 41b579ae-9507-4dd1-917d-8295dfb0bde0
                         Control:
                             ResetSeconds: 0.0
                             Control: Play
-                        Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
+                        Color: {R: 1.0, G: 0.6, B: 0.0, A: 1.0}
                         Speed: 1.0
                         ParticleSystem:
                             Settings: {}
@@ -516,22 +501,66 @@ Hierarchy:
                                                             TangentType: Linear
                                             SeedOffset: 0
         -   Entity:
-                Id: 6b791619-5d8c-49ef-b136-52a641f245d0
-                Name: bomb
+                Id: 99f9ba89-1495-4fd8-9bce-ce7d3bd53235
+                Name: projectileShipModel
                 Components:
-                    94d9819549c77e3b2213ea17e5649f7e: !TransformComponent
-                        Id: d20eb2e4-df48-4c55-982a-5d5e6ea610e8
+                    1f0641b5f668dfb4a59a4342c99b6f6f: !TransformComponent
+                        Id: 9d8d651d-b69c-44d8-b208-9875f177906f
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    a670bb92a1cbbb1f8f24df97efed3be2: !ModelComponent
+                        Id: 16789d26-b8e3-44cc-9478-42998adc7d82
+                        Model: 42766a93-5340-40fb-97ce-287096c164c2:My Models/Spaceships/projectileShip
+                        Materials: {}
+        -   Entity:
+                Id: a3747b2d-8ee1-4d0d-afbf-d881423ec215
+                Name: imaginaryPoint
+                Components:
+                    f2dfe44976014986b1a17e378d94bce9: !TransformComponent
+                        Id: a693f6ff-5243-4bd3-a610-19f17ae19660
+                        Position: {X: -0.34470862, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+        -   Entity:
+                Id: a8315949-77a9-431e-927e-761a58b1a080
+                Name: projectileShip
+                Components:
+                    6b58dc95cd8b1e9f6452d6613f5978a1: !TransformComponent
+                        Id: b71b781b-77ed-45de-a695-6405d914844d
                         Position: {X: 0.0, Y: 0.0, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
-                            ffdceb3e432eaf3beca0cf56d154df71: ref!! 7b72cb33-497d-4b6b-9050-1462b072ed01
-                            ff2418df2e76e9e03b7ae8629e2ca301: ref!! 5d9837de-49eb-4143-b463-97d9a4194fe4
-                    dd7058a8832714b0867485eea065cbc8: !Asteroids.Bomb,Asteroids
-                        Id: 45cd79b9-0811-4c99-b013-84cf38065d5f
-                        spaceShip: null
-                        fireSound: 6d7192e0-0702-4822-b3a3-50b7abef4775:Audio/FX/rocketProjectileFire
-                        hitSound: 5654542d-d608-4de6-8c70-1a79c981f6a7:Audio/FX/bombHit
-                        damage: 25
-                        aliveTimeMax: 7.5
-                        bombMove: 4e2b89db-e841-4c36-a67f-6e26eeef71db:Audio/FX/bombTravel
+                            4b7a15f943efce5c93c67154ebb8fac4: ref!! 9d8d651d-b69c-44d8-b208-9875f177906f
+                            19d09d8182e7e60d31c2d7b719e6e725: ref!! a693f6ff-5243-4bd3-a610-19f17ae19660
+                            0347142e4af3d2d9adf672b0ba70a87a: ref!! d1deac32-df29-462c-8b2f-80ca0b4554e4
+                    9a35968695205ca1dc00694ab0be4bae: !Asteroids.MultiplayerVSSpaceShip,Asteroids
+                        Id: 96e97f0d-8851-40e7-b613-5c02978ffd30
+                        moveSound: null
+                        moveSoundInstance: null
+                        acceleration: 0.85
+                        maxSpeed: 5.0
+                        maxProjectilesOnScreen: 8
+                        spaceShipModel: ref!! 99f9ba89-1495-4fd8-9bce-ce7d3bd53235
+                        imagniaryPoint: ref!! a3747b2d-8ee1-4d0d-afbf-d881423ec215
+                        projectileRocketPrefab: 00b94ff8-7e8e-4cab-bc64-45135e0cb3fb:My Prefabs/MultiplayerVsProjectiles/ProjectileRocket
+                        isDead: false
+                        isInvincible: false
+                        shootProjectile: None
+                        moveForward: None
+                        rotateLeft: None
+                        rotateRight: None
+        -   Entity:
+                Id: cafb88b6-6322-43be-8414-936e2f2b4533
+                Name: trails
+                Components:
+                    99f753c4e5b293aa05cba4cfbb19d37e: !TransformComponent
+                        Id: d1deac32-df29-462c-8b2f-80ca0b4554e4
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            99b26e66659c59fc42509340591ed56f: ref!! a7064600-69aa-43a3-87a0-7cc07cf6f9ce

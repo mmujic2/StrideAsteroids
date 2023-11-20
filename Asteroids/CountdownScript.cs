@@ -26,6 +26,8 @@ namespace Asteroids
 
         public bool isBossTime;
 
+        public Entity spaceShip;
+
         public override void Update()
         {
             currentTimer += Game.UpdateTime.Elapsed.TotalSeconds;
@@ -108,7 +110,7 @@ namespace Asteroids
                     if (MainScript.isArcadeMode)
                         Entity.Add(new ArcadeModeLogic());
                     else
-                        Entity.Add(new CampaignModeLogic());
+                        Entity.Add(new SinglePlayerLogic());
 
                     Utils.PlaySound(SoundScript.Timer, 0.5f, 1.5f);
 
@@ -180,25 +182,23 @@ namespace Asteroids
                 }
                 else if(countdownType == CountdownType.spaceShipDead)
                 {
-
-                    if(GameLogic.spaceShip.Get<Spaceship>().isDead)
+                    if(spaceShip.Get<Spaceship>().isDead)
                     {
-                        GameLogic.spaceShip.Get<Spaceship>().isDead = false;
+                        spaceShip.Get<Spaceship>().isDead = false;
                     }
                     else if(currentTimer < 3.0 * maxTimer)
                     {
                         int number = (int)(currentTimer * 8.0);
                         // Blink model
                         if(number % 2 == 0)
-                            GameLogic.spaceShip.Get<Spaceship>().spaceShipModel.Get<ModelComponent>().Enabled = false;
+                            spaceShip.Get<Spaceship>().spaceShipModel.Get<ModelComponent>().Enabled = false;
                         else
-                            GameLogic.spaceShip.Get<Spaceship>().spaceShipModel.Get<ModelComponent>().Enabled = true;
-                            
+                            spaceShip.Get<Spaceship>().spaceShipModel.Get<ModelComponent>().Enabled = true;
                     }
                     else if (currentTimer > 3.0 * maxTimer)
                     {
-                        GameLogic.spaceShip.Get<Spaceship>().spaceShipModel.Get<ModelComponent>().Enabled = true;
-                        GameLogic.spaceShip.Get<Spaceship>().isInvincible = false;
+                        spaceShip.Get<Spaceship>().spaceShipModel.Get<ModelComponent>().Enabled = true;
+                        spaceShip.Get<Spaceship>().isInvincible = false;
                         Entity.Remove<CountdownScript>();
                         return;
                     }

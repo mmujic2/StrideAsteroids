@@ -265,11 +265,11 @@ namespace Asteroids
                     float offsetZ = 0f;
                     if(Math.Abs(Entity.Transform.Position.X) > 0)
                     {
-                        offsetZ = ((numberOfProjectilesFired % numberOfProjectilesPerLine) - (numberOfProjectilesPerLine / 2.0f)) / (numberOfProjectilesPerLine / 2.0f) * GameLogic.mapSizeZ;
+                        offsetZ = ((numberOfProjectilesFired % numberOfProjectilesPerLine) - (numberOfProjectilesPerLine / 2.0f)) / (numberOfProjectilesPerLine / 2.0f) * SinglePlayerLogic.mapSizeZ;
                     }
                     else
                     {
-                        offsetX = ((numberOfProjectilesFired % numberOfProjectilesPerLine) - (numberOfProjectilesPerLine / 2.0f)) / (numberOfProjectilesPerLine / 2.0f) * GameLogic.mapSizeX;
+                        offsetX = ((numberOfProjectilesFired % numberOfProjectilesPerLine) - (numberOfProjectilesPerLine / 2.0f)) / (numberOfProjectilesPerLine / 2.0f) * SinglePlayerLogic.mapSizeX;
                     }
 
                     CreateProjectile(direction, 10.0f, moveSpeed * 0.25f, offsetX, offsetZ);
@@ -374,7 +374,7 @@ namespace Asteroids
         public override void Kill()
         {
             isDead = true;
-            GameLogic.isGameOver = true;
+            SinglePlayerLogic.isGameOver = true;
 
             if (CampaignModeLogic.bossMusic.PlayState == Stride.Media.PlayState.Playing)
                 CampaignModeLogic.bossMusic.Stop();

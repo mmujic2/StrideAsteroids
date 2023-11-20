@@ -1,23 +1,23 @@
 !PrefabAsset
-Id: 46b6f4cd-ea2a-4037-b79a-34e94a98253f
+Id: 167e2459-c169-4997-b7de-f03ac6701d72
 SerializedVersion: {Stride: 3.1.0.1}
 Tags: []
 Hierarchy:
     RootParts:
-        - ref!! 34279c61-75dc-47da-8197-978772ce1460
+        - ref!! 3e4e950b-b77a-4972-8a88-e01ea9ca1b0a
     Parts:
         -   Entity:
-                Id: 063cb2eb-78eb-4acb-b7d1-3accf7a1ab4a
+                Id: 06f4caaa-7319-46cc-bef3-2ca9441adfca
                 Name: Meteoritetrail
                 Components:
                     eb6c3948932fc2468a226a48364fc232: !TransformComponent
-                        Id: 5456f8f7-2271-4470-8a2c-96254e0d4ebd
+                        Id: 45b6dce3-226e-47ac-81c5-1e5da7e41c7f
                         Position: {X: 0.29281747, Y: 0.0, Z: 0.0688457}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 0.15, Y: 0.15, Z: 0.15}
                         Children: {}
                     e8942245f4d83244ac2eaebee7fe00a8: !ParticleSystemComponent
-                        Id: a90b9a4c-2eeb-4ca8-8c68-26205986f093
+                        Id: ccb66de9-23d7-4a32-8eb4-3ff65863405b
                         Control:
                             ResetSeconds: 0.0
                             Control: Play
@@ -501,68 +501,17 @@ Hierarchy:
                                                             TangentType: Linear
                                             SeedOffset: 0
         -   Entity:
-                Id: 34279c61-75dc-47da-8197-978772ce1460
-                Name: agilityShip
-                Components:
-                    6b58dc95cd8b1e9f6452d6613f5978a1: !TransformComponent
-                        Id: f6742716-5297-411b-952f-8742e8f1029c
-                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children:
-                            4b7a15f943efce5c93c67154ebb8fac4: ref!! 17d69a06-c269-4343-856e-8c091d5efb54
-                            19d09d8182e7e60d31c2d7b719e6e725: ref!! a84a12f9-33df-499c-b6d4-03ab0554da72
-                            0209f9c3435f62e884e6475a5308bf00: ref!! d6b13d7d-d0bc-4363-a3ef-2017b663fffb
-                    ff962b40ca6db2f7294eff5e4db6bf5a: !Asteroids.Spaceship,Asteroids
-                        Id: df2496c3-becf-4aa6-81e9-c395b2b7e1e8
-                        moveSound: null
-                        moveSoundInstance: null
-                        acceleration: 1.5
-                        maxSpeed: 5.0
-                        maxProjectilesOnScreen: 5
-                        spaceShipModel: ref!! e495ef86-0108-46eb-983d-39706eaf3e55
-                        imagniaryPoint: ref!! 46980112-412b-4973-8939-efd42c329bfb
-                        projectileRocketPrefab: 32d46a5e-507e-4ba5-a08b-844a8a0e4dda:My Prefabs/Projectiles/ProjectileLaser
-                        isDead: false
-                        isInvincible: false
-                        shootProjectile: None
-                        moveForward: None
-                        rotateLeft: None
-                        rotateRight: None
-        -   Entity:
-                Id: 46980112-412b-4973-8939-efd42c329bfb
-                Name: imaginaryPoint
-                Components:
-                    f2dfe44976014986b1a17e378d94bce9: !TransformComponent
-                        Id: a84a12f9-33df-499c-b6d4-03ab0554da72
-                        Position: {X: -0.34470862, Y: 0.0, Z: 0.0}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children: {}
-        -   Entity:
-                Id: 8af72d41-8875-4a0f-9ab0-085b4e198973
-                Name: trails
-                Components:
-                    25c6b0e74eef8af50e8fec3f4d2bb533: !TransformComponent
-                        Id: d6b13d7d-d0bc-4363-a3ef-2017b663fffb
-                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children:
-                            3353c3bc75cdf72b64b0b4283aa83a5f: ref!! 5456f8f7-2271-4470-8a2c-96254e0d4ebd
-                            0521410706d6dcb2046369c0a8c3d5d8: ref!! f3f76d2d-bc2a-4f30-a8dc-2f85af17a9b9
-        -   Entity:
-                Id: 8dbe868b-ae5c-47b8-829b-2b4a0698ff7e
+                Id: 1edc94ac-4a1d-437f-a670-640533b3e6be
                 Name: Meteoritetrail
                 Components:
                     eb6c3948932fc2468a226a48364fc232: !TransformComponent
-                        Id: f3f76d2d-bc2a-4f30-a8dc-2f85af17a9b9
+                        Id: ca0ed3bd-d387-4f9b-8633-a006fd158408
                         Position: {X: 0.29281747, Y: 0.0, Z: -0.064062886}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 0.15, Y: 0.15, Z: 0.15}
                         Children: {}
                     e8942245f4d83244ac2eaebee7fe00a8: !ParticleSystemComponent
-                        Id: 29f0c116-5d87-4c33-b1eb-8c61027f576b
+                        Id: 8c03f133-0d38-4288-b7bc-c21f1e9ccbd6
                         Control:
                             ResetSeconds: 0.0
                             Control: Play
@@ -1046,16 +995,67 @@ Hierarchy:
                                                             TangentType: Linear
                                             SeedOffset: 0
         -   Entity:
-                Id: e495ef86-0108-46eb-983d-39706eaf3e55
+                Id: 3e4e950b-b77a-4972-8a88-e01ea9ca1b0a
+                Name: agilityShip
+                Components:
+                    6b58dc95cd8b1e9f6452d6613f5978a1: !TransformComponent
+                        Id: 219eedb5-734f-46a4-96e7-1f7cced16a8e
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            4b7a15f943efce5c93c67154ebb8fac4: ref!! 151ed260-a796-4e41-9c83-5a450ba9a52a
+                            19d09d8182e7e60d31c2d7b719e6e725: ref!! 54a78d45-2164-4f4d-b91e-2fc751a4d081
+                            0209f9c3435f62e884e6475a5308bf00: ref!! 7587e6c4-7374-4bea-8f72-df70f8dab88f
+                    ca79481980613bed028dc328b02b51c4: !Asteroids.MultiplayerVSSpaceShip,Asteroids
+                        Id: e16d23da-8ff7-42fc-9029-efb7296a4d1c
+                        moveSound: null
+                        moveSoundInstance: null
+                        acceleration: 1.5
+                        maxSpeed: 5.0
+                        maxProjectilesOnScreen: 5
+                        spaceShipModel: ref!! 728fded8-cdb4-466a-85ea-151c80192dad
+                        imagniaryPoint: ref!! 6dbf5be2-8eb3-48d9-89f3-8fd2d68c9715
+                        projectileRocketPrefab: 7e3495f3-1c81-4f35-9bd2-7834c1ff5256:My Prefabs/MultiplayerVsProjectiles/ProjectileLaser
+                        isDead: false
+                        isInvincible: false
+                        shootProjectile: None
+                        moveForward: None
+                        rotateLeft: None
+                        rotateRight: None
+        -   Entity:
+                Id: 6dbf5be2-8eb3-48d9-89f3-8fd2d68c9715
+                Name: imaginaryPoint
+                Components:
+                    f2dfe44976014986b1a17e378d94bce9: !TransformComponent
+                        Id: 54a78d45-2164-4f4d-b91e-2fc751a4d081
+                        Position: {X: -0.34470862, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+        -   Entity:
+                Id: 728fded8-cdb4-466a-85ea-151c80192dad
                 Name: agilityShipModel
                 Components:
                     1f0641b5f668dfb4a59a4342c99b6f6f: !TransformComponent
-                        Id: 17d69a06-c269-4343-856e-8c091d5efb54
+                        Id: 151ed260-a796-4e41-9c83-5a450ba9a52a
                         Position: {X: 0.0, Y: 0.0, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
                     a670bb92a1cbbb1f8f24df97efed3be2: !ModelComponent
-                        Id: 10ddfed6-a6ae-4290-9b43-1251aa8669d7
+                        Id: c169aa8f-095e-4300-b18f-08ce3d0d194a
                         Model: 3a155c98-50c0-45b7-957b-d5b221a0c3f3:My Models/Spaceships/agilityShip
                         Materials: {}
+        -   Entity:
+                Id: d5cb6e2f-9b07-4ea7-b06c-517a98f22816
+                Name: trails
+                Components:
+                    25c6b0e74eef8af50e8fec3f4d2bb533: !TransformComponent
+                        Id: 7587e6c4-7374-4bea-8f72-df70f8dab88f
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            3353c3bc75cdf72b64b0b4283aa83a5f: ref!! 45b6dce3-226e-47ac-81c5-1e5da7e41c7f
+                            0521410706d6dcb2046369c0a8c3d5d8: ref!! ca0ed3bd-d387-4f9b-8633-a006fd158408

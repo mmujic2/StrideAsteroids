@@ -12,6 +12,7 @@ namespace Asteroids
 {
     public class Projectile : SyncScript
     {
+        public Entity spaceShip;
         public static Entity projectileHitParticle;
         public Sound fireSound;
         public Sound hitSound;
@@ -82,14 +83,24 @@ namespace Asteroids
             if (enemyEntity != null)
             {
                 enemyEntity.currentHp -= damage;
-
-                var particle = projectileHitParticle.Clone();
+                Kill();
+                /*var particle = projectileHitParticle.Clone();
                 particle.Transform.Position = Entity.Transform.Position;
                 MainScript.particlesScene.Entities.Add(particle);
 
                 Utils.PlaySound(hitSound);
-                SwitchToParticle();
+                SwitchToParticle();*/
             }
+        }
+
+        protected virtual void Kill()
+        {
+            var particle = projectileHitParticle.Clone();
+            particle.Transform.Position = Entity.Transform.Position;
+            MainScript.particlesScene.Entities.Add(particle);
+
+            Utils.PlaySound(hitSound);
+            SwitchToParticle();
         }
     }
 }

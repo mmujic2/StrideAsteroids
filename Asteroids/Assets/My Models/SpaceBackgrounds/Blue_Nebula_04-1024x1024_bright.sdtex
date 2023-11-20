@@ -2,6 +2,6 @@
 Id: 0a835824-b11c-47dd-a64a-a0804af888e2
 SerializedVersion: {Stride: 2.0.0.0}
 Tags: []
-Source: !file ../../../../../UI stuff/space/Blue Nebula/Blue_Nebula_04-1024x1024_bright.png
+Source: !file ../../../Resources/UI sprites/space images/Blue_Nebula_04-1024x1024_bright.png
 Type: !ColorTextureType
     ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
