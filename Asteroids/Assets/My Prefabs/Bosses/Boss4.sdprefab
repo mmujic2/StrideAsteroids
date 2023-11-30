@@ -665,7 +665,7 @@ Hierarchy:
                             f9a1beb0a8a90ba8a5d63224d85f984f: ref!! 9cc74710-ab97-48d1-84d6-2ffe3036ae1d
                             b0c431a5f9b9fea0de050f4cdb9306fb: ref!! 7f962bb3-87df-44c1-bf4b-4c6e62cae823
                             dfd86d243534c005532cfb6179128084: ref!! 4952997b-bf80-46f5-afd7-c64436f64319
-                    b8f59e3504af3313872e288da3142c79: !Asteroids.Boss4,Asteroids
+                    ccedc94d365b5d830ee8e6d1e1be258d: !Asteroids.Boss4,Asteroids
                         Id: 014c4902-c530-4a17-8e0d-162edd51dca1
                         rightParticle: ref!! 8c540849-3ab2-4757-9b41-6e5f06ff0c24
                         leftParticle: ref!! 86d4e029-1403-440e-a935-874a77583183

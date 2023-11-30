@@ -679,6 +679,6 @@ Hierarchy:
                                                             TangentType: Linear
                                             SamplerOptional: null
                                             SeedOffset: 0
-                    f4fbfa05b8eaa5c441625d150fccac22: !Asteroids.ParticleTimer,Asteroids
+                    d349b34f25ae174c8d6385b3b9d095f4: !Asteroids.ParticleTimer,Asteroids
                         Id: df9b8bed-fec8-4451-8677-9c0e621b4afb
                         aliveTimeMax: 3.0

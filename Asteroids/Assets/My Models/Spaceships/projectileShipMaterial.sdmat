@@ -15,7 +15,7 @@ Attributes:
     Specular: !MaterialSpecularMapFeature
         Enabled: false
         SpecularMap: !ComputeColor
-            Value: {R: 0.8, G: 0.8, B: 0.8, A: 1.0}
+            Value: {R: 0.0, G: 0.0, B: 0.0, A: 1.0}
         Intensity: !ComputeFloat
             Value: 1.0
     SpecularModel: !MaterialSpecularMicrofacetModelFeature
@@ -23,6 +23,11 @@ Attributes:
         Visibility: !MaterialSpecularMicrofacetVisibilityImplicit {}
         NormalDistribution: !MaterialSpecularMicrofacetNormalDistributionBlinnPhong {}
         Environment: !MaterialSpecularMicrofacetEnvironmentGGXLUT {}
+    Emissive: !MaterialEmissiveMapFeature
+        EmissiveMap: !ComputeColor
+            Value: {R: 0.0, G: 0.0, B: 0.0, A: 1.0}
+        Intensity: !ComputeFloat
+            Value: 0.5
     Overrides:
         UVScale: {X: 1.0, Y: 1.0}
 Layers: {}

@@ -71,7 +71,7 @@ namespace Asteroids
             particle.Transform.Scale *= 1.0f / (4 - tier);
             MainScript.particlesScene.Entities.Add(particle);
 
-            SinglePlayerLogic.score += 10 * (4 - tier); // smaller asteroids give more points
+            CampaignModeLogic.score += 10 * (4 - tier); // smaller asteroids give more points
             Entity.Scene.Entities.Remove(Entity);
             Entity.Dispose();
         }

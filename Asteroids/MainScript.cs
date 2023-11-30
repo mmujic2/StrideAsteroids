@@ -10,6 +10,14 @@ namespace Asteroids
 {
     public class MainScript : SyncScript
     {
+        public enum Mode
+        {
+            SinglePlayerCampaign,
+            SinglePlayerArcade,
+            MultiPlayerCampaign,
+            MultiPlayerVersus
+        }
+
         public enum Stage
         {
             stage1,
@@ -25,7 +33,7 @@ namespace Asteroids
         public Entity stage4Map;
         public static Dictionary<string, Entity> StageImages;
 
-        public static bool isArcadeMode;
+        public static Mode mode;
         public static Stage stage;
 
         // Children scenes

@@ -20,21 +20,31 @@ namespace Asteroids
         {
             base.CheckIfHit();
 
-            foreach(var player in MultiplayerVSLogic.playerInfo.Keys)
+            // If it didn't hit an asteroid earlier
+            if (Entity != null)
             {
-                if (Utils.CheckIfInRange2D(Entity.Transform.Position, player.Transform.Position, 0.03f + 0.2f, 0.03f + 0.2f))
+                foreach (var player in MultiplayerVSLogic.playerInfo.Keys)
                 {
-                    player.Get<MultiplayerVSSpaceShip>().Kill();
-                    Kill();
-                    break;
+                    if (player != spaceShip)
+                    {
+                        var spaceShipClass = player.Get<MultiplayerVSSpaceShip>();
+                        if (!spaceShipClass.isInvincible && Utils.CheckIfInRange2D(Entity.Transform.Position, player.Transform.Position, 0.03f + 0.2f, 0.03f + 0.2f))
+                        {
+                            player.Get<MultiplayerVSSpaceShip>().Kill();
+                            Kill();
+                            break;
+                        }
+                    }
                 }
             }
         }
 
-        /*protected override void Kill()
+        protected override void SwitchToParticle()
         {
-            base.Kill();
-            
-        }*/
+            base.SwitchToParticle();
+
+            var info = MultiplayerVSLogic.playerInfo[spaceShip];
+            MultiplayerVSLogic.playerInfo[spaceShip] = new(info.Item1, info.Item2 - 1);
+        }
     }
 }

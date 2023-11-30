@@ -27,14 +27,17 @@ RootAssets:
     - 218a0fd9-f9ab-440a-91ff-0ba04d9230b3:My Prefabs/Asteroids/BigAsteroid3
     - 2967dd68-6284-456f-9db4-623bb18323e8:Audio/FX/UIClick
     - 2ef34579-cf94-4f62-8db9-602c8b78ef92:Audio/FX/asteroidDeath
+    - 316d99e7-afef-42ea-9375-2a2a2fe8483d:My Prefabs/MultiplayerCoopProjectiles/ProjectileRocket
     - 3beb52fa-ce95-415a-b02b-85eb9ea3cddc:My VFX/asteroidDestroy
     - 3f21a5fc-b29f-454b-9b82-a3ee6775f17b:My VFX/spaceShipDestroy
     - 3fcaf584-7c7d-40fb-b0c0-d868ed338506:My VFX/bombHit
     - 4103c6bd-95f4-452b-a6fc-6c8c58aeb0f4:My Prefabs/bomb
+    - 44108cb6-a00b-4a93-835a-28491967de46:My Prefabs/MultiplayerCoopProjectiles/ProjectileLargeRocket
     - 448e4b17-cdd0-473b-a803-c8bbd8885f79:Audio/FX/lose
     - 46b6f4cd-ea2a-4037-b79a-34e94a98253f:My Prefabs/Spaceships/agilityShip
     - 4b8c23a7-d4f1-44e5-9649-0a3fa0389585:My VFX/alienShipDestroy
     - 4f7ae5b5-f636-4028-85e0-a565c5a5ce9c:UILibs/AlienBonusBomb
+    - 5c8a08e7-24e3-48fc-9e22-28c2f910961b:My Prefabs/MultiplayerCoopSpaceShips/agilityShip
     - 639c6d2e-9952-4748-9f30-957be6c9f649:My Prefabs/Asteroids/BigAsteroid1
     - 676f9a37-4428-45d1-b7ba-1c5945f15f9f:My Prefabs/Spaceships/damageShip
     - 6c6692be-0340-4b2f-84b3-1ade45250f00:My Prefabs/Asteroids/MediumAsteroid2
@@ -46,6 +49,7 @@ RootAssets:
     - 88985fe2-1675-4ee5-8997-6a03b78f4d53:My Prefabs/Bosses/Boss3
     - 8acdb2fb-9bf4-4890-a01f-4f7c60689ce0:Audio/FX/alienExplosion
     - 8adea33f-9c41-4e71-87c8-585a78aad731:My Prefabs/Asteroids/MediumAsteroid1
+    - 8f0f1d10-ab4e-4553-b05d-d51ac9371510:My Prefabs/MultiplayerCoopProjectiles/ProjectileLaser
     - 91ef1088-abeb-46b1-a03d-613a55dfecd2:My Prefabs/Bosses/Boss1
     - 9a5a7d4f-2c85-4359-96e9-c6cbe9eb141c:Audio/FX/bossIncoming
     - a6fe531b-48f3-42b7-82fb-1fd4115ae940:ChildrenScenes/particlesScene
@@ -59,6 +63,7 @@ RootAssets:
     - bfa809db-8242-4380-bafe-c0b03f233528:My Prefabs/MultiplayerVsProjectiles/ProjectileLargeRocket
     - bfb3093a-3a06-47ff-9880-852c7a532942:Audio/FX/extraLife
     - c1f3809d-c761-4eb2-beda-360543b3c4a5:My Prefabs/Bosses/Boss2
+    - c2836c6f-4563-4ebf-bc3a-78f42b89e527:My Prefabs/MultiplayerCoopSpaceShips/projectileShip
     - d4738d25-6f06-4bd4-8ddb-b1566ba62210:UILibs/Sprites
     - d912fa85-2cc9-4912-8032-9a9fd112c152:Audio/FX/shipMove
     - e2d1c808-5093-4630-bf6f-2f73019c53f6:ChildrenScenes/projectilesScene
@@ -66,3 +71,4 @@ RootAssets:
     - ec38d8a8-8e19-4978-8dfb-5a9386f1b73a:My Prefabs/Asteroids/MediumAsteroid3
     - f4879933-4cfb-4332-8af0-98d254ba82fd:Audio/FX/timer
     - fa587b27-597f-4b81-a398-31a92914b8cb:My Prefabs/MultiplayerVsSpaceShips/damageShip
+    - fce02fb5-2327-42a2-a33d-f4fbcc31bf6d:My Prefabs/MultiplayerCoopSpaceShips/damageShip

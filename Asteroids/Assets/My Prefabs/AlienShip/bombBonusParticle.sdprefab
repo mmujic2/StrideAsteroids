@@ -22,6 +22,6 @@ Hierarchy:
                         IsFullScreen: false
                         Resolution: {X: 1280.0, Y: 720.0, Z: 1000.0}
                         Size: {X: 1.28, Y: 0.72, Z: 1.0}
-                    1c28550e4ca9358f4840a453780d6c39: !Asteroids.BombIncreaseParticleTimer,Asteroids
+                    ce1300d6927fcfba70310f2eace7a9e7: !Asteroids.BombIncreaseParticleTimer,Asteroids
                         Id: 129069df-12b1-4c8e-9864-24942a89e5b0
                         aliveTimeMax: 2.5

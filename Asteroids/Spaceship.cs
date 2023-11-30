@@ -63,7 +63,7 @@ namespace Asteroids
         public override void Start()
         {
             // Keys aren't initialized previously
-            if(shootProjectile != Keys.None)
+            if(shootProjectile == Keys.None)
             {
                 shootProjectile = Keys.Space;
                 moveForward = Keys.Up;
@@ -202,13 +202,18 @@ namespace Asteroids
 
             projectileClass.spaceShip = Entity;
 
-            projectileClass.speedX = direction.X * 4 * acceleration + currentXSpeed;
-            projectileClass.speedZ = direction.Z * 4 * acceleration + currentZSpeed;
+            projectileClass.speedX = direction.X * 4 * GetProjectileSpeed() + currentXSpeed;
+            projectileClass.speedZ = direction.Z * 4 * GetProjectileSpeed() + currentZSpeed;
 
             MainScript.projectilesScene.Entities.Add(projectile);
         }
 
-        private void ShootBomb()
+        protected virtual float GetProjectileSpeed()
+        {
+            return acceleration;
+        }
+
+        protected virtual void ShootBomb()
         {
             // Same as shoot, just different speed
             var projectile = bomb.Clone();
@@ -248,7 +253,7 @@ namespace Asteroids
             if (moveSoundInstance.PlayState == Stride.Media.PlayState.Playing)
                 moveSoundInstance.Pause();
 
-            if (SinglePlayerLogic.numberOfLives > 0)
+            if (GetNumberOfLives() > 0)
             {
                 var countdown = new CountdownScript();
                 countdown.countdownType = CountdownScript.CountdownType.spaceShipDead;
@@ -265,6 +270,11 @@ namespace Asteroids
             }
         }
 
+        protected virtual int GetNumberOfLives()
+        {
+            return SinglePlayerLogic.numberOfLives;
+        }
+             
         protected virtual void SubtractLife()
         {
             SinglePlayerLogic.numberOfLives--;

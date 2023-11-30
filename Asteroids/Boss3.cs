@@ -51,7 +51,7 @@ namespace Asteroids
                 shootCooldown = Math.Max(0.75f, (currentHp + 250.0f) / 250.0f);
 
                 shootTimer += Game.UpdateTime.Elapsed.TotalSeconds;
-                if (shootTimer >= shootCooldown && !SinglePlayerLogic.spaceShip.Get<Spaceship>().isDead)
+                if (shootTimer >= shootCooldown && !Utils.GetRandomSpaceShip().Get<Spaceship>().isDead)
                 {
                     shootTimer = 0;
                     Shoot();

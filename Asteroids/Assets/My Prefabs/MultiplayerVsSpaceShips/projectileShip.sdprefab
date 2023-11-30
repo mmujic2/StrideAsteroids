@@ -513,7 +513,8 @@ Hierarchy:
                     a670bb92a1cbbb1f8f24df97efed3be2: !ModelComponent
                         Id: 16789d26-b8e3-44cc-9478-42998adc7d82
                         Model: 42766a93-5340-40fb-97ce-287096c164c2:My Models/Spaceships/projectileShip
-                        Materials: {}
+                        Materials:
+                            7e7b216a4c8a4ef55ed11a064be5c91d~0: 55ff7aaa-2032-44cd-815f-4f098a0b4022:My Models/Spaceships/projectileShipMaterial
         -   Entity:
                 Id: a3747b2d-8ee1-4d0d-afbf-d881423ec215
                 Name: imaginaryPoint
@@ -537,7 +538,7 @@ Hierarchy:
                             4b7a15f943efce5c93c67154ebb8fac4: ref!! 9d8d651d-b69c-44d8-b208-9875f177906f
                             19d09d8182e7e60d31c2d7b719e6e725: ref!! a693f6ff-5243-4bd3-a610-19f17ae19660
                             0347142e4af3d2d9adf672b0ba70a87a: ref!! d1deac32-df29-462c-8b2f-80ca0b4554e4
-                    9a35968695205ca1dc00694ab0be4bae: !Asteroids.MultiplayerVSSpaceShip,Asteroids
+                    047de9372cc33b01fe57bc74bcbc3a0c: !Asteroids.MultiplayerVSSpaceShip,Asteroids
                         Id: 96e97f0d-8851-40e7-b613-5c02978ffd30
                         moveSound: null
                         moveSoundInstance: null
@@ -553,6 +554,8 @@ Hierarchy:
                         moveForward: None
                         rotateLeft: None
                         rotateRight: None
+                        isGameOver: false
+                        projectileSpeed: 0.85
         -   Entity:
                 Id: cafb88b6-6322-43be-8414-936e2f2b4533
                 Name: trails

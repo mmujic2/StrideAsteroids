@@ -127,7 +127,7 @@ Hierarchy:
                         UseCustomAspectRatio: true
                         AspectRatio: 1.0
                         Slot: 2cb19590-71df-4c5a-ac86-f9b9481548f3
-                    b050dc2c4ce2eb7f9986ee2b0c16f865: !Asteroids.MainScript,Asteroids
+                    e32fe68184ea51114168f166c470457d: !Asteroids.MainScript,Asteroids
                         Id: 4d6fbf10-4147-49ce-95ea-8a57e8c62ed8
                         stage1Map: ref!! 0f13f47f-be22-4892-95da-aff3ef307a6d
                         stage2Map: ref!! aaaa2261-a006-408c-b95c-1742a6db9218

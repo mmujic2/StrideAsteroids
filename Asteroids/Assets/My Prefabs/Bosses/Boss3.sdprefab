@@ -18,7 +18,7 @@ Hierarchy:
                         Children:
                             93bafcd17c283a432182020414e9c5ef: ref!! bae5a049-341f-4293-9b12-61eb46ec890c
                             880d2f4a324e4b4f1a7d0cb3dd0640a8: ref!! 61cee3e5-283c-4050-a661-5284ee4581c1
-                    3ec9d33e8423e4e865f601117e973776: !Asteroids.Boss3,Asteroids
+                    8d48dd279966f5b177621dbf27a90a7c: !Asteroids.Boss3,Asteroids
                         Id: 385609a9-97b3-4124-88a6-ed94605e6ec6
                         TopPart: ref!! 6edd7543-b4af-41d4-ace9-44c0c5dd36bf
                         BottomPart: ref!! f3210fb5-3e06-4801-b189-4ed0388446cf

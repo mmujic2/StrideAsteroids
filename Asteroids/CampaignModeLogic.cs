@@ -69,7 +69,6 @@ namespace Asteroids
             {
                 if (!isBossStarted)
                 {
-
                     droneTimer += Game.UpdateTime.Elapsed.TotalSeconds;
                     if (droneTimer > 2.5)
                     {

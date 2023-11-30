@@ -399,6 +399,6 @@ Hierarchy:
                                             DisplayParticleRotation: false
                                             DisplayParticleScale: false
                                             DisplayParticleScaleUniform: false
-                    acf14e9841aeca0d7036ea88058c522b: !Asteroids.ParticleTimer,Asteroids
+                    68c15930bcf221ef30a209579f2e5beb: !Asteroids.ParticleTimer,Asteroids
                         Id: b1b8977d-9497-4931-b2eb-92b457fc79c2
                         aliveTimeMax: 2.0

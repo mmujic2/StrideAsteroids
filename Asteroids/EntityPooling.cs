@@ -13,6 +13,7 @@ namespace Asteroids
         // Stride's instancing can be very slow, so it's best to instantiate some used entities at load time to avoid freezes while playing
         public static Dictionary<string, Entity> spaceShips;
         public static Dictionary<string, Entity> multiplayerVsSpaceShips;
+        public static Dictionary<string, Entity> multiplayerCoopSpaceeShips;
         public static Dictionary<string, Entity> bosses;
         public static Entity bossTeleport;
 
@@ -38,6 +39,13 @@ namespace Asteroids
                 { "projectileShip", content.Load<Prefab>("My Prefabs/MultiplayerVsSpaceShips/projectileShip").Instantiate().First() },
                 { "agilityShip", content.Load<Prefab>("My Prefabs/MultiplayerVsSpaceShips/agilityShip").Instantiate().First() },
                 { "damageShip", content.Load<Prefab>("My Prefabs/MultiplayerVsSpaceShips/damageShip").Instantiate().First() }
+            };
+
+            multiplayerCoopSpaceeShips = new()
+            {
+                { "projectileShip", content.Load<Prefab>("My Prefabs/MultiplayerCoopSpaceShips/projectileShip").Instantiate().First() },
+                { "agilityShip", content.Load<Prefab>("My Prefabs/MultiplayerCoopSpaceShips/agilityShip").Instantiate().First() },
+                { "damageShip", content.Load<Prefab>("My Prefabs/MultiplayerCoopSpaceShips/damageShip").Instantiate().First() }
             };
 
             Spaceship.spaceShipDestroyParticle = content.Load<Prefab>("My VFX/spaceShipDestroy").Instantiate().First();

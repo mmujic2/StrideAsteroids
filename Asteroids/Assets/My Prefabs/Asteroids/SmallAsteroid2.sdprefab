@@ -17,7 +17,7 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             5c3560b5b98b69718df67acdbf8123c5: ref!! 7741a970-faad-4e92-b50e-743f3d98b21e
-                    9366e6c3e904c51acf2560f0abfc0627: !Asteroids.Asteroid,Asteroids
+                    694b647f2a95ed1ba2b78e2e7ee0e4d2: !Asteroids.Asteroid,Asteroids
                         Id: 2684746b-6a1a-4be7-8e15-48a1cccc174b
                         tier: 1
         -   Entity:

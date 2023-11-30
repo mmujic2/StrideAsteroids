@@ -1,4 +1,5 @@
 ﻿using Stride.Engine;
+using Stride.UI;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,11 +19,7 @@ namespace Asteroids
         public static int numberOfAliensSpawned;
         public static double alienShipSpawnMaxTimer;
         public static double alienShipSpawnTimer;
-
-        public override void Update()
-        {
-            
-        }
+        public static bool spawnAliens;
 
         public override void Start()
         {
@@ -34,6 +31,32 @@ namespace Asteroids
             alienShipSpawnMaxTimer = 15.0;
             alienShipSpawnTimer = 0.0;
             numberOfAliensSpawned = 0;
+        }
+
+        public override void Update()
+        {
+            if (spawnAliens)
+            {
+                alienShipSpawnTimer += Game.UpdateTime.Elapsed.TotalSeconds;
+                if (alienShipSpawnTimer > alienShipSpawnMaxTimer)
+                {
+                    SpawnAlien();
+                    alienShipSpawnTimer = 0.0;
+                }
+            }
+
+            // !isGameOver to avoid text change when game over
+            if (!isGameOver && Input.IsKeyReleased(Stride.Input.Keys.Escape))
+            {
+                if (UIScript.GameOverPanel.Visibility != Visibility.Visible)
+                    UIScript.GameOverPanel.Visibility = Visibility.Visible;
+                else
+                    UIScript.GameOverPanel.Visibility = Visibility.Collapsed;
+
+                UIScript.GameOverTitle.Text = "";
+                UIScript.GameOverInfo.Text = "";
+                UIScript.HideGameOverButton.Visibility = Visibility.Visible;
+            }
         }
 
         public void SpawnAlien()
@@ -71,5 +94,7 @@ namespace Asteroids
 
             numberOfAliensSpawned++;
         }
+
+
     }
 }

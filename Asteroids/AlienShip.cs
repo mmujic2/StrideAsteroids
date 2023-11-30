@@ -40,7 +40,14 @@ namespace Asteroids
             prevPosition = Entity.Transform.Position;
             Entity.Dispose();
 
-            nextPosition = SinglePlayerLogic.spaceShip.Transform.Position;
+            //if(MainScript.mode == MainScript.Mode.SinglePlayerCampaign)
+            //{
+                nextPosition = Utils.GetRandomSpaceShip().Transform.Position;
+            //}
+            //else if(MainScript.mode == MainScript.Mode.MultiPlayerVersus)
+            //{
+
+            //}
 
             shootCooldown = Math.Max(0.75, 5.0 / speed);
             shootTimer = 0;
@@ -51,7 +58,7 @@ namespace Asteroids
         public override void Update()
         {
             shootTimer += Game.UpdateTime.Elapsed.TotalSeconds;
-            if(shootTimer >= shootCooldown && !SinglePlayerLogic.spaceShip.Get<Spaceship>().isDead)
+            if(shootTimer >= shootCooldown && !Utils.GetRandomSpaceShip().Get<Spaceship>().isDead)
             {
                 shootTimer = 0;
                 Shoot();
@@ -73,8 +80,9 @@ namespace Asteroids
                 prevPosition = Entity.Transform.Position;
 
                 // prevent alien from camping spawn position
-                if(!SinglePlayerLogic.spaceShip.Get<Spaceship>().isDead)
-                    nextPosition = SinglePlayerLogic.spaceShip.Transform.Position;
+                var spaceShip = Utils.GetRandomSpaceShip();
+                if (!spaceShip.Get<Spaceship>().isDead)
+                    nextPosition = spaceShip.Transform.Position;
                 else
                 {
                     var rand = new Random();
@@ -94,7 +102,7 @@ namespace Asteroids
 
         private void Shoot()
         {
-            var direction = SinglePlayerLogic.spaceShip.Transform.Position.XZ() - Entity.Transform.Position.XZ();
+            var direction = Utils.GetRandomSpaceShip().Transform.Position.XZ() - Entity.Transform.Position.XZ();
             direction.Normalize();
 
             var newProjectile = projectilePellet.Clone();
@@ -121,9 +129,12 @@ namespace Asteroids
             MainScript.particlesScene.Entities.Add(particle);
 
             // Bomb bonus
-            particle = bombIncreaseParticle.Clone();
-            particle.Transform.Position = Entity.Transform.Position;
-            MainScript.particlesScene.Entities.Add(particle);
+            if(MainScript.mode == MainScript.Mode.SinglePlayerArcade || MainScript.mode == MainScript.Mode.SinglePlayerCampaign)
+            {
+                particle = bombIncreaseParticle.Clone();
+                particle.Transform.Position = Entity.Transform.Position;
+                MainScript.particlesScene.Entities.Add(particle);
+            }
 
             Entity.Scene.Entities.Remove(Entity);
             Entity.Dispose();

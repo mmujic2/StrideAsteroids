@@ -1,6 +1,7 @@
 ﻿using Stride.Audio;
 using Stride.Core.Mathematics;
 using Stride.Engine;
+using Stride.Rendering;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -70,22 +71,25 @@ namespace Asteroids
             return angle;
         }
 
-        public static int GetSpriteFrameFromShipName()
+        public static int GetSpriteFrameFromShipName(string name = null)
         {
-            if(SinglePlayerLogic.spaceShip != null)
+            if (name == null && SinglePlayerLogic.spaceShip != null)
+                name = SinglePlayerLogic.spaceShip.Name;
+
+            //if (SinglePlayerLogic.spaceShip != null)
+            //{
+            switch (name)
             {
-                switch (SinglePlayerLogic.spaceShip.Name)
-                {
-                    case "projectileShip": return 0;
-                    case "agilityShip": return 3;
-                    case "damageShip": return 4;
-                    default: return 0;
-                }
+                case "projectileShip": return 0;
+                case "agilityShip": return 3;
+                case "damageShip": return 4;
+                default: return 0;
             }
-            else
-            {
-                return 0;
-            }
+            //}
+            //else
+            //{
+            //    return 0;
+            //}
         }
 
         public static void PlaySound(Sound sound, float volume = 0.5f, float pitch = 1.0f)
@@ -94,6 +98,68 @@ namespace Asteroids
             instance.Volume = volume;
             instance.Pitch = pitch;
             instance.Play();
+        }
+
+        public static Material CopyMaterial(Material material, Material clone)
+        {
+            foreach (var pass in material.Passes)
+            {
+                clone.Passes.Add(new MaterialPass()
+                {
+                    HasTransparency = pass.HasTransparency,
+                    BlendState = pass.BlendState,
+                    CullMode = pass.CullMode,
+                    IsLightDependent = pass.IsLightDependent,
+                    TessellationMethod = pass.TessellationMethod,
+                    PassIndex = pass.PassIndex,
+                    Parameters = new ParameterCollection(pass.Parameters)
+                });
+            }
+            return clone;
+        }
+
+        // Since c# doesn't allow virtual static functions
+        public static Entity GetRandomSpaceShip()
+        {
+            if (MainScript.mode == MainScript.Mode.SinglePlayerCampaign)
+                return SinglePlayerLogic.spaceShip;
+            else if(MainScript.mode == MainScript.Mode.SinglePlayerArcade)
+                return ArcadeModeLogic.spaceShip;
+            else if (MainScript.mode == MainScript.Mode.MultiPlayerCampaign)
+            {
+                if (MultiplayerCoopLogic.numberOfLives > 0)
+                    return MultiplayerCoopLogic.SpaceShipSelection[new Random().Next(0, MultiplayerCoopLogic.SpaceShipSelection.Count)];
+                else
+                {
+                    var aliveShips = MultiplayerCoopLogic.SpaceShipSelection.FindAll(s => !s.Get<MultiplayerCoopSpaceShip>().isDead).ToList();
+                    if (aliveShips.Count > 0)
+                        return aliveShips[new Random().Next(0, aliveShips.Count - 1)];
+                    else
+                        return MultiplayerCoopLogic.SpaceShipSelection.First();
+                }
+            }
+            else if (MainScript.mode == MainScript.Mode.MultiPlayerVersus)
+            {
+                var aliveShips = MultiplayerVSLogic.SpaceShipSelection.FindAll(s => MultiplayerVSLogic.playerInfo[s].Item1 > 0 || !s.Get<MultiplayerVSSpaceShip>().isGameOver);
+                if (aliveShips.Count > 0)
+                    return aliveShips[new Random().Next(0, aliveShips.Count - 1)];
+                else
+                    return MultiplayerVSLogic.SpaceShipSelection.First();
+            }
+            else
+                throw new NullReferenceException("Shouldnt happen");
+        }
+
+        public static List<Entity> GetAllSpaceShips()
+        {
+            if (MainScript.mode == MainScript.Mode.SinglePlayerCampaign)
+                return new List<Entity>() { SinglePlayerLogic.spaceShip };
+            else if (MainScript.mode == MainScript.Mode.MultiPlayerVersus)
+                return MultiplayerVSLogic.SpaceShipSelection;
+            else if (MainScript.mode == MainScript.Mode.MultiPlayerCampaign)
+                return MultiplayerCoopLogic.SpaceShipSelection;
+            else
+                return new List<Entity>();
         }
     }
 }

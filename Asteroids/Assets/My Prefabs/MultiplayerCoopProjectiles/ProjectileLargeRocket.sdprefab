@@ -1,23 +1,42 @@
 !PrefabAsset
-Id: bfa809db-8242-4380-bafe-c0b03f233528
+Id: 44108cb6-a00b-4a93-835a-28491967de46
 SerializedVersion: {Stride: 3.1.0.1}
 Tags: []
 Hierarchy:
     RootParts:
-        - ref!! 9eb766c1-f569-4815-b0ad-270f9db94585
+        - ref!! 116d06dd-6467-4211-8f8c-a6764a85c232
     Parts:
         -   Entity:
-                Id: 4a616307-0961-4b89-b1a1-d8dfb3f4cdfc
+                Id: 116d06dd-6467-4211-8f8c-a6764a85c232
+                Name: projectileLargeRocket
+                Components:
+                    9b3f1eeecfd861435e44ecdb77c83177: !TransformComponent
+                        Id: 196965e8-1ee5-4616-9841-33b26d332c1f
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            67630bf044d93d4ffbab175a9ab65f55: ref!! 3e34d09b-a7b7-4ac6-b86a-7ad1298a2818
+                            43eca0bf5b26b88d658e603761d10291: ref!! 57a2ca25-dc25-4d7f-9f70-8085a62d5036
+                    9539e3c54ec3432d393beb4eb924718f: !Asteroids.MultiplayerCoopProjectile,Asteroids
+                        Id: e3f868d4-ddc7-4cce-b56c-bcdad6837069
+                        spaceShip: null
+                        fireSound: 6d7192e0-0702-4822-b3a3-50b7abef4775:Audio/FX/rocketProjectileFire
+                        hitSound: a4160fa2-f1df-4416-b6c4-64967dfbc6fd:Audio/FX/rocketProjectileHit
+                        damage: 9
+                        aliveTimeMax: 2.5
+        -   Entity:
+                Id: c3c45d10-96be-492e-9f88-ba68315c1355
                 Name: Meteoritetrail
                 Components:
                     eb6c3948932fc2468a226a48364fc232: !TransformComponent
-                        Id: 2ae50bf1-70cf-4a83-a4e3-b4e7d77774fb
+                        Id: 57a2ca25-dc25-4d7f-9f70-8085a62d5036
                         Position: {X: 0.022484375, Y: 0.0, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 0.2, Y: 0.2, Z: 1.0}
                         Children: {}
                     e8942245f4d83244ac2eaebee7fe00a8: !ParticleSystemComponent
-                        Id: b9debdc3-fb46-4cc8-9ce3-5eb7be12a90e
+                        Id: d975781e-63ff-4e3d-870c-b46773d371a9
                         Control:
                             ResetSeconds: 0.0
                             Control: Play
@@ -501,35 +520,16 @@ Hierarchy:
                                                             TangentType: Linear
                                             SeedOffset: 0
         -   Entity:
-                Id: 58ff050e-a8e6-448b-a773-d3267e13da50
+                Id: d7f1c28a-ead8-42de-a3e4-a0d808aae316
                 Name: projectileLargeRocketModel
                 Components:
                     62593f8ee1f796ff13d5a964741f7a3c: !TransformComponent
-                        Id: 0fb0b21a-d3bd-4550-8421-1d99e9603ecb
+                        Id: 3e34d09b-a7b7-4ac6-b86a-7ad1298a2818
                         Position: {X: 0.0, Y: 0.0, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
                     e6fb4ff1b63f5114b8167001a5deffa8: !ModelComponent
-                        Id: 1d39e30b-cda0-42c8-9506-34f6229b527d
+                        Id: 1bafe241-3235-4cd0-92c3-5c35bd56a84a
                         Model: 5c4395a1-7a04-4aaa-92f3-7e6d9ff9587b:My Models/Projectiles/projectileLargeRocket
                         Materials: {}
-        -   Entity:
-                Id: 9eb766c1-f569-4815-b0ad-270f9db94585
-                Name: projectileLargeRocket
-                Components:
-                    9b3f1eeecfd861435e44ecdb77c83177: !TransformComponent
-                        Id: 281d8f95-6906-4b53-a649-49ae31536e73
-                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children:
-                            67630bf044d93d4ffbab175a9ab65f55: ref!! 0fb0b21a-d3bd-4550-8421-1d99e9603ecb
-                            43eca0bf5b26b88d658e603761d10291: ref!! 2ae50bf1-70cf-4a83-a4e3-b4e7d77774fb
-                    3a0b9df83b9c9b29302c1971d705cce6: !Asteroids.MultiplayerVSProjectile,Asteroids
-                        Id: f473391f-0f91-4369-93ee-d0ce2d42c983
-                        spaceShip: null
-                        fireSound: 6d7192e0-0702-4822-b3a3-50b7abef4775:Audio/FX/rocketProjectileFire
-                        hitSound: a4160fa2-f1df-4416-b6c4-64967dfbc6fd:Audio/FX/rocketProjectileHit
-                        damage: 9
-                        aliveTimeMax: 2.5

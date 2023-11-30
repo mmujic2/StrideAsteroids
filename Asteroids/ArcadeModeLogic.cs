@@ -9,16 +9,10 @@ using System.Threading.Tasks;
 
 namespace Asteroids
 {
-    // Global class that keeps track of misc stuff (points, bombs etc.)
     public class ArcadeModeLogic : GameLogic
     {
-        public static int score;
-        public static int numberOfLives;
-        public static int numberOfBombs;
-
         public static Entity spaceShip;
 
-        // The more aliens get spawned, the stronger they become
         public static int nextLiveScore;
 
         double countdownBeforeNextSpawn;
@@ -30,26 +24,29 @@ namespace Asteroids
             base.Start();
             currentNumberOfAsteroids = 3;
             countdownBeforeNextSpawn = 2.0;
-            SpawnAsteroids();
+            SpawnAsteroids(currentNumberOfAsteroids);
 
             spaceShip = spaceShip.Clone();
 
-            numberOfLives = 3;
-            numberOfBombs = 3;
+            // Scrape these variables from other logics
+            CampaignModeLogic.score = 0;
+            SinglePlayerLogic.numberOfLives = 3;
+            SinglePlayerLogic.numberOfBombs = 3;
 
             Entity.Scene.Entities.Add(spaceShip);
 
             nextLiveScore = 2500;
 
-            UIScript.LivesCountText.Text = "x" + numberOfLives.ToString();
-            UIScript.BombsCountText.Text = "x" + numberOfBombs.ToString();
-
-            score = 0;
+            UIScript.LivesCountText.Text = "x" + SinglePlayerLogic.numberOfLives.ToString();
+            UIScript.BombsCountText.Text = "x" + SinglePlayerLogic.numberOfBombs.ToString();
+            UIScript.ScoreText.Text = "Score: " + CampaignModeLogic.score.ToString();
         }
 
         public override void Update()
         {
             base.Update();
+
+            UIScript.ScoreText.Text = "Score: " + CampaignModeLogic.score.ToString();
 
             if (MainScript.enemiesScene.Entities.Count == 0)
             {
@@ -61,26 +58,13 @@ namespace Asteroids
 
                     // Strength of aliens is reset after every new asteroid cycle
                     numberOfAliensSpawned = 0;
-                    SpawnAsteroids();
+                    SpawnAsteroids(currentNumberOfAsteroids);
                 }
             }
 
             // Doesn't need to be called every frame, but it's a small game so performance isn't that important
-            UIScript.LivesCountText.Text = "x" + numberOfLives.ToString();
-            UIScript.BombsCountText.Text = "x" + numberOfBombs.ToString();
-
-            // !isGameOver to avoid text change when game over
-            if (!isGameOver && Input.IsKeyReleased(Stride.Input.Keys.Escape))
-            {
-                if (UIScript.GameOverPanel.Visibility != Visibility.Visible)
-                    UIScript.GameOverPanel.Visibility = Visibility.Visible;
-                else
-                    UIScript.GameOverPanel.Visibility = Visibility.Collapsed;
-
-                UIScript.GameOverTitle.Text = "";
-                UIScript.GameOverInfo.Text = "";
-                UIScript.HideGameOverButton.Visibility = Visibility.Visible;
-            }
+            UIScript.LivesCountText.Text = "x" + SinglePlayerLogic.numberOfLives.ToString();
+            UIScript.BombsCountText.Text = "x" + SinglePlayerLogic.numberOfBombs.ToString();
 
             alienShipSpawnTimer += Game.UpdateTime.Elapsed.TotalSeconds;
             if (!isGameOver && alienShipSpawnTimer > alienShipSpawnMaxTimer)
@@ -89,20 +73,19 @@ namespace Asteroids
                 SpawnAlien();
             }
 
-            if (score - nextLiveScore > 0)
+            if (CampaignModeLogic.score - nextLiveScore > 0)
             {
-                numberOfLives++;
+                SinglePlayerLogic.numberOfLives++;
                 nextLiveScore += 2500;
                 Utils.PlaySound(SoundScript.ExtraLife);
             }
-
         }
 
-        private void SpawnAsteroids()
+        private void SpawnAsteroids(int numberToSpawn)
         {
             var rand = new Random();
 
-            for (int i = 0; i < currentNumberOfAsteroids; i++)
+            for (int i = 0; i < numberToSpawn; i++)
             {
                 var x = ((float)rand.NextDouble() - 0.5f) * mapSizeX * 2.0f; // generates number in range [-mapSizex, mapSizex]
                 var z = ((float)rand.NextDouble() - 0.5f) * mapSizeZ * 2.0f;

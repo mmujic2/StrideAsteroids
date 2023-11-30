@@ -18,7 +18,7 @@ Hierarchy:
                         Children:
                             756ad6f5b9351b68967cde52a0df8d22: ref!! 3bed254c-eb41-4e9e-91b7-c22e03ddd487
                             b61a7dc78b4f77f1f8ed5e3c7e2d6825: ref!! 2a30724a-beb3-4840-bc1b-b20d2fc7aaf4
-                    abc3fb8c4e826f0eccb16e2b3b43bc76: !Asteroids.AlienShip,Asteroids
+                    1232f99e30b9f85d91e326a7bf0211f8: !Asteroids.AlienShip,Asteroids
                         Id: fa75e614-9113-4078-abeb-cb3aa51493a7
                         projectilePelletPrefab: 104e1bc7-ebf3-4c8d-8cd6-485382cc3f22:My Prefabs/Projectiles/EnemyProjectilePellet
                         rotatePart: ref!! c2185549-4dd5-4102-9a91-1a7bf8250dcb

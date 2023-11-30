@@ -513,7 +513,7 @@ Hierarchy:
                             4b7a15f943efce5c93c67154ebb8fac4: ref!! 17d69a06-c269-4343-856e-8c091d5efb54
                             19d09d8182e7e60d31c2d7b719e6e725: ref!! a84a12f9-33df-499c-b6d4-03ab0554da72
                             0209f9c3435f62e884e6475a5308bf00: ref!! d6b13d7d-d0bc-4363-a3ef-2017b663fffb
-                    ff962b40ca6db2f7294eff5e4db6bf5a: !Asteroids.Spaceship,Asteroids
+                    a67e0e9daaa448a21f2b676f6c59dfa4: !Asteroids.Spaceship,Asteroids
                         Id: df2496c3-becf-4aa6-81e9-c395b2b7e1e8
                         moveSound: null
                         moveSoundInstance: null

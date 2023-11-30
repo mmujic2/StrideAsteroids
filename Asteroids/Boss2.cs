@@ -65,7 +65,7 @@ namespace Asteroids
                 shootCooldown = Math.Max(0.25f, currentHp / 150.0f);
 
                 shootTimer += Game.UpdateTime.Elapsed.TotalSeconds;
-                if (shootTimer >= shootCooldown && !SinglePlayerLogic.spaceShip.Get<Spaceship>().isDead)
+                if (shootTimer >= shootCooldown && !Utils.GetRandomSpaceShip().Get<Spaceship>().isDead)
                 {
                     shootTimer = 0;
                     Shoot();
@@ -159,7 +159,7 @@ namespace Asteroids
         {
             numberOfProjectiles = Math.Min(5, (maxHp - currentHp + 100) / 100);
 
-            var direction = SinglePlayerLogic.spaceShip.Transform.Position.XZ() - Entity.Transform.Position.XZ();
+            var direction = Utils.GetRandomSpaceShip().Transform.Position.XZ() - Entity.Transform.Position.XZ();
             direction.Normalize();
 
             for(int i = -numberOfProjectiles / 2; i <= numberOfProjectiles / 2; i++)

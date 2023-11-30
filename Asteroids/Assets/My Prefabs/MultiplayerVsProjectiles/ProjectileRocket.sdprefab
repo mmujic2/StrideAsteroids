@@ -18,7 +18,7 @@ Hierarchy:
                         Children:
                             67630bf044d93d4ffbab175a9ab65f55: ref!! efecff82-d91e-48cd-ae97-54464081b214
                             43eca0bf5b26b88d658e603761d10291: ref!! 047d4088-02c9-45c2-85b1-cdacc2757dd8
-                    7bd7f08ee9874dbec3ba2ba4c1ed201b: !Asteroids.MultiplayerVSProjectile,Asteroids
+                    4eff6b4364e67262ddf21b1bf4b65f2b: !Asteroids.MultiplayerVSProjectile,Asteroids
                         Id: 9d4e9f46-6c38-4afd-ad95-7cfceddc86df
                         spaceShip: null
                         fireSound: 6d7192e0-0702-4822-b3a3-50b7abef4775:Audio/FX/rocketProjectileFire

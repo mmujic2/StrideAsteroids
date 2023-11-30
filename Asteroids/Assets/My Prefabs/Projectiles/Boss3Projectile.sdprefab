@@ -512,7 +512,7 @@ Hierarchy:
                         Children:
                             7015fde6891a307b6efce93b73c21cd3: ref!! f22fdc1d-7274-4fcf-a1b9-b7ad56f5fbb1
                             b8f3cba7071d6987e0dd944c995e3813: ref!! ead5d122-9641-43a2-907e-28b196994174
-                    780bb8186f8cde2015459444b5f134d0: !Asteroids.MiniShip,Asteroids
+                    cf4e549c7104b7360f6c168c695807cf: !Asteroids.MiniShip,Asteroids
                         Id: d07f0eef-c6db-476a-8860-5eb8e44403af
         -   Entity:
                 Id: dbf01ab6-32b0-43d7-8e9b-b0003b4f603a

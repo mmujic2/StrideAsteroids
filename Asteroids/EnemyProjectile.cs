@@ -32,11 +32,27 @@ namespace Asteroids
             Move();
 
             // Search for spaceship instead
-            if(!SinglePlayerLogic.spaceShip.Get<Spaceship>().isInvincible && !SinglePlayerLogic.isGameOver &&
+
+            var allSpaceShips = Utils.GetAllSpaceShips();
+
+            foreach(var spaceShip in allSpaceShips)
+            {
+                if(spaceShip != null)
+                {
+                    var spaceShipClass = spaceShip.Get<Spaceship>();
+                    if (!spaceShipClass.isInvincible && !GameLogic.isGameOver &&
+                        Utils.CheckIfInRange2D(Entity.Transform.Position, spaceShip.Transform.Position, 0.02f + spaceShipClass.sizeX, 0.02f + spaceShipClass.sizeY))
+                    {
+                        spaceShipClass.Kill();
+                    }
+                }
+            }
+
+            /*if(!SinglePlayerLogic.spaceShip.Get<Spaceship>().isInvincible && !SinglePlayerLogic.isGameOver &&
                 Utils.CheckIfInRange2D(Entity.Transform.Position, SinglePlayerLogic.spaceShip.Transform.Position, 0.02f + SinglePlayerLogic.spaceShip.Get<Spaceship>().sizeX, 0.02f + SinglePlayerLogic.spaceShip.Get<Spaceship>().sizeY))
             {
                 SinglePlayerLogic.spaceShip.Get<Spaceship>().Kill();
-            }
+            }*/
         }
     }
 }

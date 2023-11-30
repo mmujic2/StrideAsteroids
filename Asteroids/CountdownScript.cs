@@ -107,10 +107,15 @@ namespace Asteroids
                     UIScript.TimerText.Visibility = Visibility.Hidden;
                     UIScript.TimerText.TextSize = 50;
 
-                    if (MainScript.isArcadeMode)
-                        Entity.Add(new ArcadeModeLogic());
-                    else
+                    if (MainScript.mode == MainScript.Mode.SinglePlayerCampaign)
                         Entity.Add(new SinglePlayerLogic());
+                    else if (MainScript.mode == MainScript.Mode.SinglePlayerArcade)
+                        Entity.Add(new ArcadeModeLogic());
+                    else if (MainScript.mode == MainScript.Mode.MultiPlayerVersus)
+                        Entity.Add(new MultiplayerVSLogic());
+                    else if (MainScript.mode == MainScript.Mode.MultiPlayerCampaign)
+                        Entity.Add(new MultiplayerCoopLogic());
+
 
                     Utils.PlaySound(SoundScript.Timer, 0.5f, 1.5f);
 
@@ -199,7 +204,7 @@ namespace Asteroids
                     {
                         spaceShip.Get<Spaceship>().spaceShipModel.Get<ModelComponent>().Enabled = true;
                         spaceShip.Get<Spaceship>().isInvincible = false;
-                        Entity.Remove<CountdownScript>();
+                        Entity.Remove(this);
                         return;
                     }
                 }

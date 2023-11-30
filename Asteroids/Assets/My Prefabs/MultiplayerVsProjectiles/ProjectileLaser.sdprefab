@@ -17,7 +17,7 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             4197e1ebf335641b5ebaad47e54e9eb2: ref!! cf1d5535-4fe8-48c0-bd84-505c9753bf20
-                    f37110e7c4c662facf99d548cbe3ac04: !Asteroids.MultiplayerVSProjectile,Asteroids
+                    870d6f2cf350c6e45bd9acd85f85c5fc: !Asteroids.MultiplayerVSProjectile,Asteroids
                         Id: 56e5c8e8-2d41-4b1d-9fd2-90a3e4198b5a
                         spaceShip: null
                         fireSound: b0aa072a-a446-4067-a62b-972232af2af2:Audio/FX/laserProjectileFire

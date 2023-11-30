@@ -1,27 +1,92 @@
 !PrefabAsset
-Id: bfa809db-8242-4380-bafe-c0b03f233528
+Id: c2836c6f-4563-4ebf-bc3a-78f42b89e527
 SerializedVersion: {Stride: 3.1.0.1}
 Tags: []
 Hierarchy:
     RootParts:
-        - ref!! 9eb766c1-f569-4815-b0ad-270f9db94585
+        - ref!! 8b9f5c93-bb81-49c1-b12b-717f1c924888
     Parts:
         -   Entity:
-                Id: 4a616307-0961-4b89-b1a1-d8dfb3f4cdfc
+                Id: 7f0a2198-b4b6-4f67-812d-0c4fa9184d6c
+                Name: projectileShipModel
+                Components:
+                    1f0641b5f668dfb4a59a4342c99b6f6f: !TransformComponent
+                        Id: 589d4d07-bbdf-49d8-ba72-98a0af610a5b
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    a670bb92a1cbbb1f8f24df97efed3be2: !ModelComponent
+                        Id: 4cf50a8d-9d15-437b-a1ff-644dd0cfa9cc
+                        Model: 42766a93-5340-40fb-97ce-287096c164c2:My Models/Spaceships/projectileShip
+                        Materials:
+                            7e7b216a4c8a4ef55ed11a064be5c91d~0: 55ff7aaa-2032-44cd-815f-4f098a0b4022:My Models/Spaceships/projectileShipMaterial
+        -   Entity:
+                Id: 8b9f5c93-bb81-49c1-b12b-717f1c924888
+                Name: projectileShip
+                Components:
+                    6b58dc95cd8b1e9f6452d6613f5978a1: !TransformComponent
+                        Id: 24eea478-97b2-45f6-8d2f-7a4c6697e167
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            4b7a15f943efce5c93c67154ebb8fac4: ref!! 589d4d07-bbdf-49d8-ba72-98a0af610a5b
+                            19d09d8182e7e60d31c2d7b719e6e725: ref!! 387eb78b-fa17-4aaa-bdb1-abcda392f4a4
+                            0347142e4af3d2d9adf672b0ba70a87a: ref!! ab357334-3ab3-4904-8efc-ae0cc6b05679
+                    4268ccd67023eb8ec5aaa8361838dd52: !Asteroids.MultiplayerCoopSpaceShip,Asteroids
+                        Id: 2db6ec1f-6fe1-4d6a-a20d-5f34cc604c29
+                        moveSound: null
+                        moveSoundInstance: null
+                        acceleration: 0.85
+                        maxSpeed: 5.0
+                        maxProjectilesOnScreen: 8
+                        spaceShipModel: ref!! 7f0a2198-b4b6-4f67-812d-0c4fa9184d6c
+                        imagniaryPoint: ref!! a620d2f6-4218-4c2d-8eb2-f4671352dd8c
+                        projectileRocketPrefab: 316d99e7-afef-42ea-9375-2a2a2fe8483d:My Prefabs/MultiplayerCoopProjectiles/ProjectileRocket
+                        isDead: false
+                        isInvincible: false
+                        shootProjectile: None
+                        moveForward: None
+                        rotateLeft: None
+                        rotateRight: None
+        -   Entity:
+                Id: a2a10b01-40d7-446b-bec7-63a37da3f2ad
+                Name: trails
+                Components:
+                    99f753c4e5b293aa05cba4cfbb19d37e: !TransformComponent
+                        Id: ab357334-3ab3-4904-8efc-ae0cc6b05679
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            99b26e66659c59fc42509340591ed56f: ref!! 6f771ba9-9536-4e9c-891f-156dace21868
+        -   Entity:
+                Id: a620d2f6-4218-4c2d-8eb2-f4671352dd8c
+                Name: imaginaryPoint
+                Components:
+                    f2dfe44976014986b1a17e378d94bce9: !TransformComponent
+                        Id: 387eb78b-fa17-4aaa-bdb1-abcda392f4a4
+                        Position: {X: -0.34470862, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+        -   Entity:
+                Id: ede727da-48a6-4cdb-a392-4e56fd123f16
                 Name: Meteoritetrail
                 Components:
                     eb6c3948932fc2468a226a48364fc232: !TransformComponent
-                        Id: 2ae50bf1-70cf-4a83-a4e3-b4e7d77774fb
-                        Position: {X: 0.022484375, Y: 0.0, Z: 0.0}
+                        Id: 6f771ba9-9536-4e9c-891f-156dace21868
+                        Position: {X: 0.29281747, Y: 0.0, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 0.2, Y: 0.2, Z: 1.0}
+                        Scale: {X: 0.25, Y: 0.25, Z: 0.25}
                         Children: {}
                     e8942245f4d83244ac2eaebee7fe00a8: !ParticleSystemComponent
-                        Id: b9debdc3-fb46-4cc8-9ce3-5eb7be12a90e
+                        Id: 65247506-ad2a-4a9e-beb5-bfc5326103ac
                         Control:
                             ResetSeconds: 0.0
                             Control: Play
-                        Color: {R: 0.09019608, G: 0.5568628, B: 1.0, A: 1.0}
+                        Color: {R: 1.0, G: 0.6, B: 0.0, A: 1.0}
                         Speed: 1.0
                         ParticleSystem:
                             Settings: {}
@@ -500,36 +565,3 @@ Hierarchy:
                                                             Value: {R: 1.0, G: 1.0, B: 1.0, A: 0.0}
                                                             TangentType: Linear
                                             SeedOffset: 0
-        -   Entity:
-                Id: 58ff050e-a8e6-448b-a773-d3267e13da50
-                Name: projectileLargeRocketModel
-                Components:
-                    62593f8ee1f796ff13d5a964741f7a3c: !TransformComponent
-                        Id: 0fb0b21a-d3bd-4550-8421-1d99e9603ecb
-                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children: {}
-                    e6fb4ff1b63f5114b8167001a5deffa8: !ModelComponent
-                        Id: 1d39e30b-cda0-42c8-9506-34f6229b527d
-                        Model: 5c4395a1-7a04-4aaa-92f3-7e6d9ff9587b:My Models/Projectiles/projectileLargeRocket
-                        Materials: {}
-        -   Entity:
-                Id: 9eb766c1-f569-4815-b0ad-270f9db94585
-                Name: projectileLargeRocket
-                Components:
-                    9b3f1eeecfd861435e44ecdb77c83177: !TransformComponent
-                        Id: 281d8f95-6906-4b53-a649-49ae31536e73
-                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children:
-                            67630bf044d93d4ffbab175a9ab65f55: ref!! 0fb0b21a-d3bd-4550-8421-1d99e9603ecb
-                            43eca0bf5b26b88d658e603761d10291: ref!! 2ae50bf1-70cf-4a83-a4e3-b4e7d77774fb
-                    3a0b9df83b9c9b29302c1971d705cce6: !Asteroids.MultiplayerVSProjectile,Asteroids
-                        Id: f473391f-0f91-4369-93ee-d0ce2d42c983
-                        spaceShip: null
-                        fireSound: 6d7192e0-0702-4822-b3a3-50b7abef4775:Audio/FX/rocketProjectileFire
-                        hitSound: a4160fa2-f1df-4416-b6c4-64967dfbc6fd:Audio/FX/rocketProjectileHit
-                        damage: 9
-                        aliveTimeMax: 2.5

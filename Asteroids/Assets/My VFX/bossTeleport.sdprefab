@@ -1067,6 +1067,6 @@ Hierarchy:
                                             ForceVortex: 0.0
                                             ForceRepulsive: 0.0
                                             ForceFixed: {X: 0.0, Y: 0.0, Z: 0.0}
-                    f9314f7cd4250dfea17cfaee1a6c6411: !Asteroids.ParticleTimer,Asteroids
+                    fab92f9c7ccf692807036ca47f2c0667: !Asteroids.ParticleTimer,Asteroids
                         Id: 3fcffdf9-2123-49e4-afc1-cd9a59f8c695
                         aliveTimeMax: 2.5

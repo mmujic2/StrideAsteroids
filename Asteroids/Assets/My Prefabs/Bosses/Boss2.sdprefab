@@ -1493,7 +1493,7 @@ Hierarchy:
                         Children:
                             93bafcd17c283a432182020414e9c5ef: ref!! 79537a6f-9170-46aa-a95b-68f330c74c56
                             36341bc863bb8c8f43424360c9649f4f: ref!! eaa5c119-1690-454e-8509-95a1d76dce4c
-                    1fa368c296dbf2637459252063a14205: !Asteroids.Boss2,Asteroids
+                    82d6da5b60bf70a64e1b786cb2b81d87: !Asteroids.Boss2,Asteroids
                         Id: 5e646e3f-e1ff-42b3-b2d4-6f866bc659d8
                         rightParticle: ref!! eefe3105-2914-4ec9-80bf-a711b29ebb77
                         leftParticle: ref!! 6c8090f6-9728-4435-87f5-9cb7647527b4

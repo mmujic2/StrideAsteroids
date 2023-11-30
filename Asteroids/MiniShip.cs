@@ -17,12 +17,21 @@ namespace Asteroids
         public Vector3 direction;
         [DataMemberIgnore]
         public float speedMultiplier;
+        [DataMemberIgnore]
+        public Entity spaceShipToFollow;
 
         public override void Start()
         {
             sizeX = 0.25f;
             sizeY = 0.25f;
             currentHp = 1;
+
+            spaceShipToFollow = Utils.GetRandomSpaceShip();
+
+            if (spaceShipToFollow.Get<Spaceship>().isDead)
+                Entity.Scene = null;
+
+            Entity.Dispose();
         }
 
         public override void Update()
@@ -36,7 +45,7 @@ namespace Asteroids
 
         public override void Kill()
         {
-            SinglePlayerLogic.score += 25;
+            CampaignModeLogic.score += 25;
 
             var particle = AlienShip.alienShipDestroyParticle.Clone();
             particle.Transform.Position = Entity.Transform.Position;
@@ -47,16 +56,20 @@ namespace Asteroids
 
             Utils.PlaySound(AlienShip.AlienDeathSound, 0.25f);
 
-            Entity.Scene.Entities.Remove(Entity);
+            Entity.Scene = null;
+            // Entity.Scene.Entities.Remove(Entity);
             Entity.Dispose();
         }
 
         protected override void Move()
         {
+            if (spaceShipToFollow.Get<Spaceship>().isDead)
+                Kill();
+
             Entity.Transform.Position.X += speedX * (float) Game.UpdateTime.Elapsed.TotalSeconds * speedMultiplier;
             Entity.Transform.Position.Z += speedZ * (float) Game.UpdateTime.Elapsed.TotalSeconds * speedMultiplier;
 
-            var preferredDirection =  SinglePlayerLogic.spaceShip.Transform.Position - Entity.Transform.Position;
+            var preferredDirection = spaceShipToFollow.Transform.Position - Entity.Transform.Position;
             preferredDirection.Normalize();
 
             if (direction.X < preferredDirection.X - 0.01f)

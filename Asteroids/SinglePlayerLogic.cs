@@ -45,19 +45,6 @@ namespace Asteroids
             UIScript.LivesCountText.Text = "x" + numberOfLives.ToString();
             UIScript.BombsCountText.Text = "x" + numberOfBombs.ToString();
 
-            // !isGameOver to avoid text change when game over
-            if(!isGameOver && Input.IsKeyReleased(Stride.Input.Keys.Escape))
-            {
-                if(UIScript.GameOverPanel.Visibility != Visibility.Visible)
-                    UIScript.GameOverPanel.Visibility = Visibility.Visible;
-                else
-                    UIScript.GameOverPanel.Visibility = Visibility.Collapsed;
-
-                UIScript.GameOverTitle.Text = "";
-                UIScript.GameOverInfo.Text = "";
-                UIScript.HideGameOverButton.Visibility = Visibility.Visible;
-            }
-
             alienShipSpawnTimer += Game.UpdateTime.Elapsed.TotalSeconds;
             if (!isGameOver && alienShipSpawnTimer > alienShipSpawnMaxTimer)
             {
